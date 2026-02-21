@@ -101,11 +101,25 @@ Inteligência avançada de design e experiência do usuário:
 - **Implementação**: Guias para React, Next.js, Vue e Tailwind.
 - **Acessibilidade**: Checklist rigoroso de conformidade WCAG.
 
-### [Senior Security](file:///Users/ruy/Code/mySkills/docs/senior-security/SKILL.md)
-Engenharia de segurança e auditoria:
-- **Auditoria**: Identificação de vulnerabilidades e testes de penetração.
-- **Arquitetura**: Padrões de design seguro e criptografia.
 - **Compliance**: Guias para implementações seguras e resilientes.
+
+### [Email Composer](file:///Users/ruy/Code/mySkills/docs/email-composer/SKILL.md)
+Composição profissional de e-mails para diversos contextos:
+- **Negócios**: Estruturas para propostas, follow-ups e reuniões.
+- **Técnico**: Updates de infraestrutura, avisos de manutenção e suporte.
+- **Etiqueta**: Boas práticas de tom, clareza e Call to Action (CTA).
+
+### [Senior DevOps](file:///Users/ruy/Code/mySkills/docs/senior-devops/SKILL.md)
+Automação de infraestrutura e delivery:
+- **IaC**: Scaffolding para Terraform e configurações multi-cloud.
+- **CI/CD**: Geração de pipelines de entrega contínua com foco em qualidade.
+- **Deployment**: Estratégias avançadas de atualização e recuperação de desastres.
+
+### [UX Researcher & Designer](file:///Users/ruy/Code/mySkills/docs/ux-researcher-designer/SKILL.md)
+Estratégia de experiência do usuário baseada em dados:
+- **Personas**: Geração automatizada de personas a partir de dados reais.
+- **Jornada**: Mapeamento de pontos de contato e descoberta de fricções.
+- **Validação**: Frameworks de testes de usabilidade e síntese de pesquisa.
 
 ### [UI Design System](file:///Users/ruy/Code/mySkills/docs/ui-design-system/SKILL.md)
 Toolkit para sistemas de design e consistência visual:
@@ -150,6 +164,9 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/seo`: Ativa o especialista em SEO e estratégia de conteúdo.
 - `/ui-pro-max`: Ativa a inteligência avançada de design UI/UX.
 - `/security`: Ativa o especialista em segurança e auditoria de sistemas.
+- `/email-composer`: Ativa o redator especializado em e-mails corporativos e técnicos.
+- `/senior-devops`: Ativa o especialista em infraestrutura segura e automação de entrega.
+- `/ux-researcher-designer`: Ativa o kit completo de pesquisa e design focado no usuário.
 
 ## 📁 Estrutura do Projeto
 
