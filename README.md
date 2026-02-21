@@ -1,0 +1,26 @@
+# mySkills
+
+Este repositório contém uma coleção de skills especializadas para o **Antigravity**, projetadas para estender as capacidades do assistente em áreas específicas como gestão de produtos, marketing e negócios.
+
+## 🚀 Skills Disponíveis
+
+### [Product Manager](file:///Users/ruy/Code/mySkills/docs/product-manager/SKILL.md)
+Uma skill de Senior Product Manager focada em:
+- **Estratégia**: Desenvolvimento de visão e posicionamento de mercado.
+- **Priorização**: Frameworks como RICE e análise de Valor vs. Complexidade.
+- **Discovery**: Pesquisa de usuários e validação de problemas.
+- **Execução**: Planejamento de roadmaps e coordenação de lançamentos.
+
+## 🛠️ Como Usar
+
+Você pode acessar as skills diretamente via comandos de barra no chat:
+
+- `/product-manager`: Ativa a persona de Product Manager e carrega as instruções de estratégia e roadmap.
+
+## 📁 Estrutura do Projeto
+
+- `docs/`: Contém as definições detalhadas das skills em formato Markdown (`SKILL.md`).
+- `.agent/workflows/`: Contém as configurações dos comandos de barra (`/`) para facilitar o acesso às skills.
+
+---
+*Este repositório foi criado para centralizar e organizar inteligência especializada para desenvolvimento de produtos e negócios.*
