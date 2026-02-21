@@ -113,6 +113,19 @@ Toolkit para sistemas de design e consistência visual:
 - **Sistemas**: Arquitetura de componentes escaláveis e responsivos.
 - **Handoff**: Documentação facilitada para a transição entre design e desenvolvimento.
 
+## 📦 Instalação via NPX
+
+Agora você pode usar esta biblioteca de skills em qualquer projeto usando o comando `npx`:
+
+```bash
+# Listar todas as skills disponíveis
+npx @ruyfranca/myskills list
+
+# Adicionar uma skill específica ao seu projeto atual
+# Isso criará a estrutura .claude/skills/nome-da-skill/
+npx @ruyfranca/myskills add <nome-da-skill>
+```
+
 ## 🛠️ Como Usar
 
 Você pode acessar as skills diretamente via comandos de barra no chat:
