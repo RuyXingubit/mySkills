@@ -62,10 +62,12 @@ Especialista em automação e análise de planilhas:
 - **Padrões**: Formatação profissional e boas práticas de dados.
 
 ### [PPTX Automation](file:///Users/ruy/Code/mySkills/docs/pptx/SKILL.md)
-Criação, edição e análise de apresentações PowerPoint:
-- **Design**: Foco em hierarquia visual, cores e tipografia profissional.
-- **Edição**: Manipulação avançada via OOXML e templates.
-- **Utilitários**: Geração de thumbnails, inventários de texto e automação de layouts.
+...
+### [Senior Fullstack](file:///Users/ruy/Code/mySkills/docs/senior-fullstack/SKILL.md)
+Desenvolvimento completo de aplicações web:
+- **Stack**: React, Next.js, Node.js e PostgreSQL.
+- **Arquitetura**: Padrões de design escaláveis e fluxos de CI/CD.
+- **Automação**: Scripts de scaffolding e análise de qualidade de código.
 
 ### [UI Design System](file:///Users/ruy/Code/mySkills/docs/ui-design-system/SKILL.md)
 Toolkit para sistemas de design e consistência visual:
@@ -89,6 +91,7 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/canvas-design`: Ativa o artista visual para criação de artes e posters de alta qualidade.
 - `/xlsx`: Ativa o especialista em automação e análise de planilhas Excel.
 - `/pptx`: Ativa o especialista em criação, edição e análise de apresentações PowerPoint.
+- `/senior-fullstack`: Ativa o especialista em desenvolvimento fullstack ponta a ponta.
 
 ## 📁 Estrutura do Projeto
 
