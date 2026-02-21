@@ -11,6 +11,12 @@ Uma skill de Senior Product Manager focada em:
 - **Discovery**: Pesquisa de usuários e validação de problemas.
 - **Execução**: Planejamento de roadmaps e coordenação de lançamentos.
 
+### [Brainstorming](file:///Users/ruy/Code/mySkills/docs/brainstorming/SKILL.md)
+Um processo de design colaborativo focado em:
+- **Exploração**: Refinamento de ideias através de perguntas sequenciais.
+- **Alternativas**: Proposta de múltiplos caminhos com análise de trade-offs.
+- **Simplicidade**: Aplicação do princípio YAGNI para evitar complexidade desnecessária.
+
 ## 🛠️ Como Usar
 
 Você pode acessar as skills diretamente via comandos de barra no chat:
