@@ -64,10 +64,30 @@ Especialista em automação e análise de planilhas:
 ### [PPTX Automation](file:///Users/ruy/Code/mySkills/docs/pptx/SKILL.md)
 ...
 ### [Senior Fullstack](file:///Users/ruy/Code/mySkills/docs/senior-fullstack/SKILL.md)
-Desenvolvimento completo de aplicações web:
-- **Stack**: React, Next.js, Node.js e PostgreSQL.
-- **Arquitetura**: Padrões de design escaláveis e fluxos de CI/CD.
-- **Automação**: Scripts de scaffolding e análise de qualidade de código.
+...
+### [Senior Prompt Engineer](file:///Users/ruy/Code/mySkills/docs/senior-prompt-engineer/SKILL.md)
+Especialista em orquestração de LLMs e sistemas agenticos:
+- **Otimização**: Refinamento de prompts e redução de alucinações.
+- **Arquitetura**: Design de sistemas RAG e loops autônomos.
+- **Avaliação**: Frameworks para medir performance de modelos de IA.
+
+### [File Organizer](file:///Users/ruy/Code/mySkills/docs/file-organizer/SKILL.md)
+Organização inteligente de arquivos e diretórios:
+- **Curadoria**: Estruturação lógica de pastas baseada em contexto.
+- **Duplicatas**: Identificação e remoção segura de arquivos repetidos.
+- **Produtividade**: Automação de limpeza e manutenção de downloads.
+
+### [Theme Factory](file:///Users/ruy/Code/mySkills/docs/theme-factory/SKILL.md)
+Curadoria de temas profissionais para artefatos:
+- **Estética**: Paletas de cores e pares de fontes selecionados por designers.
+- **Showcase**: Visualização de 10 temas prontos para uso em slides e docs.
+- **Consistência**: Aplicação sistemática de identidade visual.
+
+### [Artifacts Builder](file:///Users/ruy/Code/mySkills/docs/artifacts-builder/SKILL.md)
+Ferramentas avançadas para criação de artefatos interativos:
+- **Stack**: React, Tailwind CSS e shadcn/ui.
+- **Bundling**: Geração de arquivos HTML únicos e auto-contidos.
+- **UX**: Foco em interfaces premium e dashboards complexos.
 
 ### [UI Design System](file:///Users/ruy/Code/mySkills/docs/ui-design-system/SKILL.md)
 Toolkit para sistemas de design e consistência visual:
@@ -92,6 +112,10 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/xlsx`: Ativa o especialista em automação e análise de planilhas Excel.
 - `/pptx`: Ativa o especialista em criação, edição e análise de apresentações PowerPoint.
 - `/senior-fullstack`: Ativa o especialista em desenvolvimento fullstack ponta a ponta.
+- `/prompt-engineer`: Ativa o especialista em engenharia de prompt e sistemas de IA.
+- `/file-organizer`: Ativa o organizador inteligente de arquivos e pastas.
+- `/theme-factory`: Ativa a fábrica de temas visuais e identidade de marca.
+- `/artifacts-builder`: Ativa o construtor de artefatos interativos complexos (React/shadcn).
 
 ## 📁 Estrutura do Projeto
 
