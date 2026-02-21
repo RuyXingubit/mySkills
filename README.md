@@ -24,6 +24,28 @@ Toolkit completo para desenvolvimento frontend moderno:
 - **Ferramentas**: Scripts para geração de componentes e scaffolding.
 - **Referências**: Guias detalhados de padrões e boas práticas.
 
+### [Code Reviewer](file:///Users/ruy/Code/mySkills/docs/code-reviewer/SKILL.md)
+Especialista em qualidade de código e padrões:
+- **Análise**: Revisão de Pull Requests e identificação de anti-padrões.
+- **Ferramentas**: Scripts para verificação de qualidade e geração de relatórios.
+- **Checklists**: Guias passo a passo para revisões consistentes.
+
+### [Systematic Debugging](file:///Users/ruy/Code/mySkills/docs/systematic-debugging/SKILL.md)
+Processo rigoroso para resolução de bugs:
+- **Metodologia**: Abordagem científica para isolamento e causa raiz.
+- **Recursos**: Guias de tracing e "Defense in Depth".
+- **Estratégia**: Fluxos específicos para depuração sob pressão.
+
+### [Test-Driven Development (TDD)](file:///Users/ruy/Code/mySkills/docs/test-driven-development/SKILL.md)
+Fluxo de desenvolvimento orientado a testes:
+- **Ciclo**: Guia completo do Red-Green-Refactor.
+- **Qualidade**: Prevenção de anti-padrões de teste e foco em design.
+
+### [Business Analyst](file:///Users/ruy/Code/mySkills/docs/business-analyst/SKILL.md)
+Alinhamento entre negócio e tecnologia:
+- **Requisitos**: Tradução de necessidades em especificações técnicas.
+- **Visão**: Definição de processos, critérios de aceitação e visão de produto.
+
 ## 🛠️ Como Usar
 
 Você pode acessar as skills diretamente via comandos de barra no chat:
@@ -31,6 +53,10 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/product-manager`: Ativa a persona de Product Manager e carrega as instruções de estratégia e roadmap.
 - `/brainstorm`: Inicia um processo de design colaborativo para explorar ideias antes da implementação.
 - `/senior-frontend`: Ativa o especialista em frontend para React, Next.js e otimização de performance.
+- `/code-reviewer`: Ativa o revisor de código para garantir qualidade e padrões técnicos.
+- `/debugging`: Inicia o processo de depuração sistemática para bugs complexos.
+- `/tdd`: Ativa o fluxo de desenvolvimento orientado a testes (Red-Green-Refactor).
+- `/business-analyst`: Ativa o analista de negócios para definição de requisitos e alinhamento.
 
 ## 📁 Estrutura do Projeto
 
