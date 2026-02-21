@@ -42,9 +42,24 @@ Fluxo de desenvolvimento orientado a testes:
 - **Qualidade**: Prevenção de anti-padrões de teste e foco em design.
 
 ### [Business Analyst](file:///Users/ruy/Code/mySkills/docs/business-analyst/SKILL.md)
-Alinhamento entre negócio e tecnologia:
-- **Requisitos**: Tradução de necessidades em especificações técnicas.
-- **Visão**: Definição de processos, critérios de aceitação e visão de produto.
+...
+### [PDF Processing Pro](file:///Users/ruy/Code/mySkills/docs/pdf-processing-pro/SKILL.md)
+Processamento avançado de documentos PDF:
+- **Automação**: Preenchimento de formulários com validação e OCR.
+- **Extração**: Detecção inteligente de tabelas e metadados.
+- **Produção**: Scripts prontos para processamento em lote.
+
+### [Canvas Design](file:///Users/ruy/Code/mySkills/docs/canvas-design/SKILL.md)
+Criação de arte visual de alto nível:
+- **Filosofia**: Design baseado em manifestos estéticos.
+- **Qualidade**: Geração de arte em PDF/PNG com nível de museu.
+- **Tipografia**: Uso de biblioteca de fontes profissionais.
+
+### [XLSX Automation](file:///Users/ruy/Code/mySkills/docs/xlsx/SKILL.md)
+Especialista em automação e análise de planilhas:
+- **Modelagem**: Criação de modelos financeiros dinâmicos com fórmulas.
+- **Validação**: Scripts de recálculo e checagem de erros.
+- **Padrões**: Formatação profissional e boas práticas de dados.
 
 ### [UI Design System](file:///Users/ruy/Code/mySkills/docs/ui-design-system/SKILL.md)
 Toolkit para sistemas de design e consistência visual:
@@ -64,6 +79,9 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/tdd`: Ativa o fluxo de desenvolvimento orientado a testes (Red-Green-Refactor).
 - `/business-analyst`: Ativa o analista de negócios para definição de requisitos e alinhamento.
 - `/ui-design-system`: Ativa o especialista em Design System para criar e gerenciar tokens e consistência visual.
+- `/pdf-pro`: Ativa o especialista em processamento de PDFs, formulários e OCR.
+- `/canvas-design`: Ativa o artista visual para criação de artes e posters de alta qualidade.
+- `/xlsx`: Ativa o especialista em automação e análise de planilhas Excel.
 
 ## 📁 Estrutura do Projeto
 
