@@ -17,11 +17,20 @@ Um processo de design colaborativo focado em:
 - **Alternativas**: Proposta de múltiplos caminhos com análise de trade-offs.
 - **Simplicidade**: Aplicação do princípio YAGNI para evitar complexidade desnecessária.
 
+### [Senior Frontend](file:///Users/ruy/Code/mySkills/docs/senior-frontend/SKILL.md)
+Toolkit completo para desenvolvimento frontend moderno:
+- **Especialidade**: React, Next.js, TypeScript e Tailwind CSS.
+- **Performance**: Análise de bundles e guias de otimização.
+- **Ferramentas**: Scripts para geração de componentes e scaffolding.
+- **Referências**: Guias detalhados de padrões e boas práticas.
+
 ## 🛠️ Como Usar
 
 Você pode acessar as skills diretamente via comandos de barra no chat:
 
 - `/product-manager`: Ativa a persona de Product Manager e carrega as instruções de estratégia e roadmap.
+- `/brainstorm`: Inicia um processo de design colaborativo para explorar ideias antes da implementação.
+- `/senior-frontend`: Ativa o especialista em frontend para React, Next.js e otimização de performance.
 
 ## 📁 Estrutura do Projeto
 
