@@ -61,6 +61,12 @@ Especialista em automação e análise de planilhas:
 - **Validação**: Scripts de recálculo e checagem de erros.
 - **Padrões**: Formatação profissional e boas práticas de dados.
 
+### [PPTX Automation](file:///Users/ruy/Code/mySkills/docs/pptx/SKILL.md)
+Criação, edição e análise de apresentações PowerPoint:
+- **Design**: Foco em hierarquia visual, cores e tipografia profissional.
+- **Edição**: Manipulação avançada via OOXML e templates.
+- **Utilitários**: Geração de thumbnails, inventários de texto e automação de layouts.
+
 ### [UI Design System](file:///Users/ruy/Code/mySkills/docs/ui-design-system/SKILL.md)
 Toolkit para sistemas de design e consistência visual:
 - **Tokens**: Geração automatizada de tokens de cores, tipografia e espaçamento.
@@ -82,6 +88,7 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/pdf-pro`: Ativa o especialista em processamento de PDFs, formulários e OCR.
 - `/canvas-design`: Ativa o artista visual para criação de artes e posters de alta qualidade.
 - `/xlsx`: Ativa o especialista em automação e análise de planilhas Excel.
+- `/pptx`: Ativa o especialista em criação, edição e análise de apresentações PowerPoint.
 
 ## 📁 Estrutura do Projeto
 
