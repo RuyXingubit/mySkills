@@ -89,6 +89,24 @@ Ferramentas avançadas para criação de artefatos interativos:
 - **Bundling**: Geração de arquivos HTML únicos e auto-contidos.
 - **UX**: Foco em interfaces premium e dashboards complexos.
 
+### [SEO Optimizer](file:///Users/ruy/Code/mySkills/docs/seo-optimizer/SKILL.md)
+Especialista em otimização para mecanismos de busca:
+- **Conteúdo**: Estratégia de palavras-chave e otimização On-Page.
+- **Técnico**: Core Web Vitals, Schema markup e indexação.
+- **E-E-A-T**: Foco em autoridade e confiança do conteúdo.
+
+### [UI/UX Pro Max](file:///Users/ruy/Code/mySkills/docs/ui-ux-pro-max/SKILL.md)
+Inteligência avançada de design e experiência do usuário:
+- **Design System**: Gerador de sistemas de design com base em indústria e estilo.
+- **Implementação**: Guias para React, Next.js, Vue e Tailwind.
+- **Acessibilidade**: Checklist rigoroso de conformidade WCAG.
+
+### [Senior Security](file:///Users/ruy/Code/mySkills/docs/senior-security/SKILL.md)
+Engenharia de segurança e auditoria:
+- **Auditoria**: Identificação de vulnerabilidades e testes de penetração.
+- **Arquitetura**: Padrões de design seguro e criptografia.
+- **Compliance**: Guias para implementações seguras e resilientes.
+
 ### [UI Design System](file:///Users/ruy/Code/mySkills/docs/ui-design-system/SKILL.md)
 Toolkit para sistemas de design e consistência visual:
 - **Tokens**: Geração automatizada de tokens de cores, tipografia e espaçamento.
@@ -116,6 +134,9 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/file-organizer`: Ativa o organizador inteligente de arquivos e pastas.
 - `/theme-factory`: Ativa a fábrica de temas visuais e identidade de marca.
 - `/artifacts-builder`: Ativa o construtor de artefatos interativos complexos (React/shadcn).
+- `/seo`: Ativa o especialista em SEO e estratégia de conteúdo.
+- `/ui-pro-max`: Ativa a inteligência avançada de design UI/UX.
+- `/security`: Ativa o especialista em segurança e auditoria de sistemas.
 
 ## 📁 Estrutura do Projeto
 
