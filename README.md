@@ -46,6 +46,12 @@ Alinhamento entre negócio e tecnologia:
 - **Requisitos**: Tradução de necessidades em especificações técnicas.
 - **Visão**: Definição de processos, critérios de aceitação e visão de produto.
 
+### [UI Design System](file:///Users/ruy/Code/mySkills/docs/ui-design-system/SKILL.md)
+Toolkit para sistemas de design e consistência visual:
+- **Tokens**: Geração automatizada de tokens de cores, tipografia e espaçamento.
+- **Sistemas**: Arquitetura de componentes escaláveis e responsivos.
+- **Handoff**: Documentação facilitada para a transição entre design e desenvolvimento.
+
 ## 🛠️ Como Usar
 
 Você pode acessar as skills diretamente via comandos de barra no chat:
@@ -57,6 +63,7 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/debugging`: Inicia o processo de depuração sistemática para bugs complexos.
 - `/tdd`: Ativa o fluxo de desenvolvimento orientado a testes (Red-Green-Refactor).
 - `/business-analyst`: Ativa o analista de negócios para definição de requisitos e alinhamento.
+- `/ui-design-system`: Ativa o especialista em Design System para criar e gerenciar tokens e consistência visual.
 
 ## 📁 Estrutura do Projeto
 
