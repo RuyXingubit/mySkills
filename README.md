@@ -127,18 +127,50 @@ Toolkit para sistemas de design e consistência visual:
 - **Sistemas**: Arquitetura de componentes escaláveis e responsivos.
 - **Handoff**: Documentação facilitada para a transição entre design e desenvolvimento.
 
-## 📦 Instalação via NPX
+## 📦 Instalação e Uso via NPX
 
-Agora você pode usar esta biblioteca de skills em qualquer projeto usando o comando `npx`:
+Esta biblioteca de skills pode ser usada em qualquer projeto local sem a necessidade de clonar o repositório manualmente.
+
+### Comandos Disponíveis
 
 ```bash
-# Listar todas as skills disponíveis
+# 1. Listar todas as skills na biblioteca
 npx @ruyfranca/myskills list
 
-# Adicionar uma skill específica ao seu projeto atual
-# Isso criará a estrutura .claude/skills/nome-da-skill/
+# 2. Instalar uma skill em um novo projeto
+# (Cria automaticamente a pasta .claude/skills/nome-da-skill/)
 npx @ruyfranca/myskills add <nome-da-skill>
+
+# Exemplo prático:
+npx @ruyfranca/myskills add pptx
 ```
+
+---
+
+## 🔄 Fluxo de Atualização (Para Desenvolvedores)
+
+Se você adicionou novas skills ou editou arquivos no repositório, siga estes passos para refletir as mudanças no `npx`:
+
+### 1. Atualizar o GitHub
+Garanta que todas as alterações foram enviadas para o repositório remoto:
+```bash
+git add .
+git commit -m "feat: adiciona nova skill X"
+git push origin main
+```
+
+### 2. Publicar Versão no NPM
+O NPM não permite publicar a mesma versão duas vezes. Você deve incrementar a versão no `package.json` e publicar:
+
+```bash
+# Sobe a versão (patch: 1.0.0 -> 1.0.1)
+npm version patch
+
+# Publica o pacote atualizado
+npm publish --access public
+```
+
+*Nota: Se você tiver 2FA ativado, o terminal abrirá o navegador ou solicitará o código OTP.*
 
 ## 🛠️ Como Usar
 
