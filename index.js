@@ -10,7 +10,7 @@ import inquirer from 'inquirer';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const program = new Command();
 
-const SKILLS_DIR = path.join(__dirname, 'docs');
+const SKILLS_DIR = path.join(__dirname, '.agent', 'skills');
 
 program
   .name('myskills')
@@ -36,7 +36,7 @@ program
   .description('Adiciona uma skill ao projeto atual')
   .argument('[skill]', 'Nome da skill para adicionar')
   .action(async (skillName) => {
-    const skills = (await fs.readdir(SKILLS_DIR)).filter(s => 
+    const skills = (await fs.readdir(SKILLS_DIR)).filter(s =>
       fs.statSync(path.join(SKILLS_DIR, s)).isDirectory()
     );
 

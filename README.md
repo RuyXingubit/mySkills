@@ -4,98 +4,98 @@ Este repositório contém uma coleção de skills especializadas para o **Antigr
 
 ## 🚀 Skills Disponíveis
 
-### [Product Manager](file:///Users/ruy/Code/mySkills/docs/product-manager/SKILL.md)
+### [Product Manager](file:///Users/ruy/Code/mySkills/.agent/skills/product-manager/SKILL.md)
 Uma skill de Senior Product Manager focada em:
 - **Estratégia**: Desenvolvimento de visão e posicionamento de mercado.
 - **Priorização**: Frameworks como RICE e análise de Valor vs. Complexidade.
 - **Discovery**: Pesquisa de usuários e validação de problemas.
 - **Execução**: Planejamento de roadmaps e coordenação de lançamentos.
 
-### [Brainstorming](file:///Users/ruy/Code/mySkills/docs/brainstorming/SKILL.md)
+### [Brainstorming](file:///Users/ruy/Code/mySkills/.agent/skills/brainstorming/SKILL.md)
 Um processo de design colaborativo focado em:
 - **Exploração**: Refinamento de ideias através de perguntas sequenciais.
 - **Alternativas**: Proposta de múltiplos caminhos com análise de trade-offs.
 - **Simplicidade**: Aplicação do princípio YAGNI para evitar complexidade desnecessária.
 
-### [Senior Frontend](file:///Users/ruy/Code/mySkills/docs/senior-frontend/SKILL.md)
+### [Senior Frontend](file:///Users/ruy/Code/mySkills/.agent/skills/senior-frontend/SKILL.md)
 Toolkit completo para desenvolvimento frontend moderno:
 - **Especialidade**: React, Next.js, TypeScript e Tailwind CSS.
 - **Performance**: Análise de bundles e guias de otimização.
 - **Ferramentas**: Scripts para geração de componentes e scaffolding.
 - **Referências**: Guias detalhados de padrões e boas práticas.
 
-### [Code Reviewer](file:///Users/ruy/Code/mySkills/docs/code-reviewer/SKILL.md)
+### [Code Reviewer](file:///Users/ruy/Code/mySkills/.agent/skills/code-reviewer/SKILL.md)
 Especialista em qualidade de código e padrões:
 - **Análise**: Revisão de Pull Requests e identificação de anti-padrões.
 - **Ferramentas**: Scripts para verificação de qualidade e geração de relatórios.
 - **Checklists**: Guias passo a passo para revisões consistentes.
 
-### [Systematic Debugging](file:///Users/ruy/Code/mySkills/docs/systematic-debugging/SKILL.md)
+### [Systematic Debugging](file:///Users/ruy/Code/mySkills/.agent/skills/systematic-debugging/SKILL.md)
 Processo rigoroso para resolução de bugs:
 - **Metodologia**: Abordagem científica para isolamento e causa raiz.
 - **Recursos**: Guias de tracing e "Defense in Depth".
 - **Estratégia**: Fluxos específicos para depuração sob pressão.
 
-### [Test-Driven Development (TDD)](file:///Users/ruy/Code/mySkills/docs/test-driven-development/SKILL.md)
+### [Test-Driven Development (TDD)](file:///Users/ruy/Code/mySkills/.agent/skills/test-driven-development/SKILL.md)
 Fluxo de desenvolvimento orientado a testes:
 - **Ciclo**: Guia completo do Red-Green-Refactor.
 - **Qualidade**: Prevenção de anti-padrões de teste e foco em design.
 
-### [Business Analyst](file:///Users/ruy/Code/mySkills/docs/business-analyst/SKILL.md)
+### [Business Analyst](file:///Users/ruy/Code/mySkills/.agent/skills/business-analyst/SKILL.md)
 ...
-### [PDF Processing Pro](file:///Users/ruy/Code/mySkills/docs/pdf-processing-pro/SKILL.md)
+### [PDF Processing Pro](file:///Users/ruy/Code/mySkills/.agent/skills/pdf-processing-pro/SKILL.md)
 Processamento avançado de documentos PDF:
 - **Automação**: Preenchimento de formulários com validação e OCR.
 - **Extração**: Detecção inteligente de tabelas e metadados.
 - **Produção**: Scripts prontos para processamento em lote.
 
-### [Canvas Design](file:///Users/ruy/Code/mySkills/docs/canvas-design/SKILL.md)
+### [Canvas Design](file:///Users/ruy/Code/mySkills/.agent/skills/canvas-design/SKILL.md)
 Criação de arte visual de alto nível:
 - **Filosofia**: Design baseado em manifestos estéticos.
 - **Qualidade**: Geração de arte em PDF/PNG com nível de museu.
 - **Tipografia**: Uso de biblioteca de fontes profissionais.
 
-### [XLSX Automation](file:///Users/ruy/Code/mySkills/docs/xlsx/SKILL.md)
+### [XLSX Automation](file:///Users/ruy/Code/mySkills/.agent/skills/xlsx/SKILL.md)
 Especialista em automação e análise de planilhas:
 - **Modelagem**: Criação de modelos financeiros dinâmicos com fórmulas.
 - **Validação**: Scripts de recálculo e checagem de erros.
 - **Padrões**: Formatação profissional e boas práticas de dados.
 
-### [PPTX Automation](file:///Users/ruy/Code/mySkills/docs/pptx/SKILL.md)
+### [PPTX Automation](file:///Users/ruy/Code/mySkills/.agent/skills/pptx/SKILL.md)
 ...
-### [Senior Fullstack](file:///Users/ruy/Code/mySkills/docs/senior-fullstack/SKILL.md)
+### [Senior Fullstack](file:///Users/ruy/Code/mySkills/.agent/skills/senior-fullstack/SKILL.md)
 ...
-### [Senior Prompt Engineer](file:///Users/ruy/Code/mySkills/docs/senior-prompt-engineer/SKILL.md)
+### [Senior Prompt Engineer](file:///Users/ruy/Code/mySkills/.agent/skills/senior-prompt-engineer/SKILL.md)
 Especialista em orquestração de LLMs e sistemas agenticos:
 - **Otimização**: Refinamento de prompts e redução de alucinações.
 - **Arquitetura**: Design de sistemas RAG e loops autônomos.
 - **Avaliação**: Frameworks para medir performance de modelos de IA.
 
-### [File Organizer](file:///Users/ruy/Code/mySkills/docs/file-organizer/SKILL.md)
+### [File Organizer](file:///Users/ruy/Code/mySkills/.agent/skills/file-organizer/SKILL.md)
 Organização inteligente de arquivos e diretórios:
 - **Curadoria**: Estruturação lógica de pastas baseada em contexto.
 - **Duplicatas**: Identificação e remoção segura de arquivos repetidos.
 - **Produtividade**: Automação de limpeza e manutenção de downloads.
 
-### [Theme Factory](file:///Users/ruy/Code/mySkills/docs/theme-factory/SKILL.md)
+### [Theme Factory](file:///Users/ruy/Code/mySkills/.agent/skills/theme-factory/SKILL.md)
 Curadoria de temas profissionais para artefatos:
 - **Estética**: Paletas de cores e pares de fontes selecionados por designers.
 - **Showcase**: Visualização de 10 temas prontos para uso em slides e docs.
 - **Consistência**: Aplicação sistemática de identidade visual.
 
-### [Artifacts Builder](file:///Users/ruy/Code/mySkills/docs/artifacts-builder/SKILL.md)
+### [Artifacts Builder](file:///Users/ruy/Code/mySkills/.agent/skills/artifacts-builder/SKILL.md)
 Ferramentas avançadas para criação de artefatos interativos:
 - **Stack**: React, Tailwind CSS e shadcn/ui.
 - **Bundling**: Geração de arquivos HTML únicos e auto-contidos.
 - **UX**: Foco em interfaces premium e dashboards complexos.
 
-### [SEO Optimizer](file:///Users/ruy/Code/mySkills/docs/seo-optimizer/SKILL.md)
+### [SEO Optimizer](file:///Users/ruy/Code/mySkills/.agent/skills/seo-optimizer/SKILL.md)
 Especialista em otimização para mecanismos de busca:
 - **Conteúdo**: Estratégia de palavras-chave e otimização On-Page.
 - **Técnico**: Core Web Vitals, Schema markup e indexação.
 - **E-E-A-T**: Foco em autoridade e confiança do conteúdo.
 
-### [UI/UX Pro Max](file:///Users/ruy/Code/mySkills/docs/ui-ux-pro-max/SKILL.md)
+### [UI/UX Pro Max](file:///Users/ruy/Code/mySkills/.agent/skills/ui-ux-pro-max/SKILL.md)
 Inteligência avançada de design e experiência do usuário:
 - **Design System**: Gerador de sistemas de design com base em indústria e estilo.
 - **Implementação**: Guias para React, Next.js, Vue e Tailwind.
@@ -103,109 +103,109 @@ Inteligência avançada de design e experiência do usuário:
 
 - **Compliance**: Guias para implementações seguras e resilientes.
 
-### [Email Composer](file:///Users/ruy/Code/mySkills/docs/email-composer/SKILL.md)
+### [Email Composer](file:///Users/ruy/Code/mySkills/.agent/skills/email-composer/SKILL.md)
 Composição profissional de e-mails para diversos contextos:
 - **Negócios**: Estruturas para propostas, follow-ups e reuniões.
 - **Técnico**: Updates de infraestrutura, avisos de manutenção e suporte.
 - **Etiqueta**: Boas práticas de tom, clareza e Call to Action (CTA).
 
-### [API Integration Specialist](file:///Users/ruy/Code/mySkills/docs/api-integration-specialist/SKILL.md)
+### [API Integration Specialist](file:///Users/ruy/Code/mySkills/.agent/skills/api-integration-specialist/SKILL.md)
 Especialista em integração de sistemas e APIs de terceiros:
 - **Segurança**: Implementação de OAuth 2.0, chaves de API e verificação de webhooks.
 - **Resiliência**: Padrões de retentativa (backoff), circuit breakers e tratamento de erros.
 - **Eficiência**: Gerenciamento de rate limits, paginação e transformação de dados.
 
-### [Mobile Design](file:///Users/ruy/Code/mySkills/docs/mobile-design/SKILL.md)
+### [Mobile Design](file:///Users/ruy/Code/mySkills/.agent/skills/mobile-design/SKILL.md)
 Design e desenvolvimento mobile de alta performance:
 - **UX**: Touch-first design, Fitts' Law e otimização da Thumb Zone.
 - **Plataformas**: Convenções específicas para iOS (SwiftUI) e Android (Material 3).
 - **Performance**: Técnicas para 60fps, otimização de listas e gerenciamento de bateria.
 
-### [Senior QA](file:///Users/ruy/Code/mySkills/docs/senior-qa/SKILL.md)
+### [Senior QA](file:///Users/ruy/Code/mySkills/.agent/skills/senior-qa/SKILL.md)
 Garantia de qualidade e automação rigorosa:
 - **Estratégia**: Planejamento de testes seguindo a Pirâmide de Testes.
 - **Automação**: Scaffolding para testes E2E, unitários e de integração.
 
-### [Writing Plans](file:///Users/ruy/Code/mySkills/docs/writing-plans/SKILL.md)
+### [Writing Plans](file:///Users/ruy/Code/mySkills/.agent/skills/writing-plans/SKILL.md)
 Planejamento detalhado de implementação:
 - **Bite-sized**: Fragmentação de tarefas complexas em ações de 2-5 minutos.
 - **TDD Nativo**: Planos focados em testes falhos antes da implementação.
 - **Precisão**: Documentação exata de arquivos, comandos e snippets para execução direta.
 - **Análise**: Ferramentas de análise de cobertura e métricas de qualidade.
 
-### [Lead Research Assistant](file:///Users/ruy/Code/mySkills/docs/lead-research-assistant/SKILL.md)
+### [Lead Research Assistant](file:///Users/ruy/Code/mySkills/.agent/skills/lead-research-assistant/SKILL.md)
 Inteligência comercial e qualificação de leads:
 - **Prospecção**: Busca ativa de empresas que se encaixam no Perfil de Cliente Ideal (ICP).
 - **Qualificação**: Atribuição de scores de prioridade (1-10) baseados em sinais reais de mercado.
 - **Estratégia**: Criação de pontos de contato personalizados e identificação de tomadores de decisão.
 
-### [CTO Advisor](file:///Users/ruy/Code/mySkills/docs/cto-advisor/SKILL.md)
+### [CTO Advisor](file:///Users/ruy/Code/mySkills/.agent/skills/cto-advisor/SKILL.md)
 Liderança técnica estratégica e governança de arquitetura:
 - **Estratégia**: Roadmaps de longo prazo, inovação e alinhamento de negócios.
 - **Arquitetura**: Gestão de ADRs e revisões sistemáticas de infraestrutura.
 - **Execução**: Escalonamento de times e métricas de excelência (DORA).
 
-### [Supabase Postgres](file:///Users/ruy/Code/mySkills/docs/supabase-postgres/SKILL.md)
+### [Supabase Postgres](file:///Users/ruy/Code/mySkills/.agent/skills/supabase-postgres/SKILL.md)
 Otimização profunda de Postgres e Supabase:
 - **Performance**: Estratégias de indexação (composite, partial, covering) e análise de queries.
 - **Segurança**: Row-Level Security (RLS) avançado e gestão de privilégios.
 - **Arquitetura**: Design de schema, gerenciamento de conexões e concorrência.
 
-### [Clean Code](file:///Users/ruy/Code/mySkills/docs/clean-code/SKILL.md)
+### [Clean Code](file:///Users/ruy/Code/mySkills/.agent/skills/clean-code/SKILL.md)
 Padrões de codificação pragmáticos e legíveis:
 - **Simplicidade**: Foco em KISS, DRY e YAGNI para evitar over-engineering.
 - **Refatoração**: Uso de cláusulas de guarda e redução de aninhamento (flat code).
 - **Nomes**: Convenções que revelam a intenção do código sem necessidade de comentários.
 
-### [Senior DevOps](file:///Users/ruy/Code/mySkills/docs/senior-devops/SKILL.md)
+### [Senior DevOps](file:///Users/ruy/Code/mySkills/.agent/skills/senior-devops/SKILL.md)
 Automação de infraestrutura e delivery:
 - **IaC**: Scaffolding para Terraform e configurações multi-cloud.
 - **CI/CD**: Geração de pipelines de entrega contínua com foco em qualidade.
 - **Deployment**: Estratégias avançadas de atualização e recuperação de desastres.
 
-### [Docker Expert](file:///Users/ruy/Code/mySkills/docs/docker-expert/SKILL.md)
+### [Docker Expert](file:///Users/ruy/Code/mySkills/.agent/skills/docker-expert/SKILL.md)
 Especialista em conteinerização e orquestração:
 - **Otimização**: Multi-stage builds e redução drástica do tamanho de imagens.
 - **Segurança**: Configuração de usuários não-root e gestão segura de segredos.
 - **Compose**: Orquestração de múltiplos serviços com redes isoladas e healthchecks.
 
-### [Software Architecture](file:///Users/ruy/Code/mySkills/docs/software-architecture/SKILL.md)
+### [Software Architecture](file:///Users/ruy/Code/mySkills/.agent/skills/software-architecture/SKILL.md)
 Arquitetura de sistemas e liderança técnica:
 - **Clean Architecture**: Separação clara entre domínio, casos de uso e infraestrutura.
 - **DDD**: Alinhamento do código com as regras de negócio e linguagem ubíqua.
 - **Padrões**: Aplicação sistemática de SOLID, KISS e DRY.
 
-### [NestJS Expert](file:///Users/ruy/Code/mySkills/docs/nestjs/SKILL.md)
+### [NestJS Expert](file:///Users/ruy/Code/mySkills/.agent/skills/nestjs/SKILL.md)
 Desenvolvimento backend empresarial com NestJS:
 - **Arquitetura**: Módulos independentes, injeção de dependência e desacoplamento.
 - **Lifecycle**: Uso estratégico de Guards, Interceptors, Pipes e Middleware.
 - **Integração**: Conexão resiliente com Prisma, TypeORM e Mongoose.
 
-### [Next.js Best Practices](file:///Users/ruy/Code/mySkills/docs/nextjs-best-practices/SKILL.md)
+### [Next.js Best Practices](file:///Users/ruy/Code/mySkills/.agent/skills/nextjs-best-practices/SKILL.md)
 Modernidade em React com App Router:
 - **RSC**: Decisão entre Server e Client Components para performance máxima.
 - **Data Fetching**: Busca de dados no servidor com Streaming e Suspense.
 - **Mutações**: Uso de Server Actions e gerenciamento de estado simplificado.
 
-### [Copywriting](file:///Users/ruy/Code/mySkills/docs/copywriting/SKILL.md)
+### [Copywriting](file:///Users/ruy/Code/mySkills/.agent/skills/copywriting/SKILL.md)
 Escrita persuasiva para conversão e marketing:
 - **Landing Pages**: Headline, Subhead e CTAs focadas em clareza e ação.
 - **Vendas**: Transformação de funcionalidades em benefícios reais para o cliente.
 - **Psicologia**: Gatilhos mentais e estruturas de convencimento lógico.
 
-### [Executing Marketing Campaigns](file:///Users/ruy/Code/mySkills/docs/marketing-campaigns/SKILL.md)
+### [Executing Marketing Campaigns](file:///Users/ruy/Code/mySkills/.agent/skills/marketing-campaigns/SKILL.md)
 Planejamento e execução de campanhas digitais:
 - **Estratégia**: Definição de objetivos, personas e mix de canais (E-mail, Social, Paid).
 - **Conteúdo**: Criação de ativos de campanha alinhados com a identidade da marca.
 - **Analytics**: Monitoramento de conversão, CTR e ROI para otimização em tempo real.
 
-### [Web Performance](file:///Users/ruy/Code/mySkills/docs/web-performance/SKILL.md)
+### [Web Performance](file:///Users/ruy/Code/mySkills/.agent/skills/web-performance/SKILL.md)
 Otimização profunda de performance web:
 - **Core Web Vitals**: Foco em LCP, FID e CLS para SEO e UX.
 - **Ativos**: Otimização de imagens (WebP/AVIF), responsive design e lazy loading.
 - **Bundle**: Redução de JS, code splitting e estratégias de cache agressivas.
 
-### [Invoice Organizer](file:///Users/ruy/Code/mySkills/docs/invoice-organizer/SKILL.md)
+### [Invoice Organizer](file:///Users/ruy/Code/mySkills/.agent/skills/invoice-organizer/SKILL.md)
 Organização automatizada de faturas e recibos:
 - **Extração**: Leitura inteligente de fornecedor, data, valor e faturas via OCR.
 - **Estruturação**: Renomeação padronizada e arquivamento por ano/categoria.
@@ -213,13 +213,13 @@ Organização automatizada de faturas e recibos:
 
 - **Validação**: Frameworks de testes de usabilidade e síntese de pesquisa.
 
-### [Content Research Writer](file:///Users/ruy/Code/mySkills/docs/content-research-writer/SKILL.md)
+### [Content Research Writer](file:///Users/ruy/Code/mySkills/.agent/skills/content-research-writer/SKILL.md)
 Parceiro de pesquisa e redação para conteúdo profissional:
 - **Pesquisa**: Busca de dados, citações e evidências para sustentar argumentos.
 - **Escrita**: Otimização de hooks, feedbacks por seção e preservação de voz.
 - **Estrutura**: Auxílio em outlines, newsletters e documentação técnica.
 
-### [UI Design System](file:///Users/ruy/Code/mySkills/docs/ui-design-system/SKILL.md)
+### [UI Design System](file:///Users/ruy/Code/mySkills/.agent/skills/ui-design-system/SKILL.md)
 Toolkit para sistemas de design e consistência visual:
 - **Tokens**: Geração automatizada de tokens de cores, tipografia e espaçamento.
 - **Sistemas**: Arquitetura de componentes escaláveis e responsivos.
@@ -317,7 +317,7 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 
 ## 📁 Estrutura do Projeto
 
-- `docs/`: Contém as definições detalhadas das skills em formato Markdown (`SKILL.md`).
+- `.agent/skills/`: Contém as definições detalhadas das skills em formato Markdown (`SKILL.md`).
 - `.agent/workflows/`: Contém as configurações dos comandos de barra (`/`) para facilitar o acesso às skills.
 
 ---

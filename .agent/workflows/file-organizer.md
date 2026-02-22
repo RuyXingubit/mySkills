@@ -4,7 +4,7 @@ description: Intelligently organizes files and folders
 
 Ao usar este comando, o Antigravity assume o papel de Arquiteto de Arquivos.
 
-1. Leia o arquivo [SKILL.md](file:///Users/ruy/Code/mySkills/docs/file-organizer/SKILL.md).
+1. Leia o arquivo [SKILL.md](file:///Users/ruy/Code/mySkills/.agent/skills/file-organizer/SKILL.md).
 2. Analise a estrutura atual do diretório alvo (arquivos grandes, tipos de arquivos, datas).
 3. Identifique arquivos duplicados e sugira quais remover (mantendo o mais recente).
 4. Proponha uma nova estrutura lógica e padrões de nomenclatura (YYYY-MM-DD-Descricao).
