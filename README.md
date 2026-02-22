@@ -139,6 +139,12 @@ Inteligência comercial e qualificação de leads:
 - **Qualificação**: Atribuição de scores de prioridade (1-10) baseados em sinais reais de mercado.
 - **Estratégia**: Criação de pontos de contato personalizados e identificação de tomadores de decisão.
 
+### [CTO Advisor](file:///Users/ruy/Code/mySkills/docs/cto-advisor/SKILL.md)
+Liderança técnica estratégica e governança de arquitetura:
+- **Estratégia**: Roadmaps de longo prazo, inovação e alinhamento de negócios.
+- **Arquitetura**: Gestão de ADRs e revisões sistemáticas de infraestrutura.
+- **Execução**: Escalonamento de times e métricas de excelência (DORA).
+
 ### [Senior DevOps](file:///Users/ruy/Code/mySkills/docs/senior-devops/SKILL.md)
 Automação de infraestrutura e delivery:
 - **IaC**: Scaffolding para Terraform e configurações multi-cloud.
@@ -237,6 +243,7 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/senior-qa`: Ativa o especialista em garantia de qualidade e automação de testes.
 - `/writing-plans`: Ativa o arquiteto para criação de planos de implementação detalhados e TDD.
 - `/lead-research`: Ativa o especialista em pesquisa e qualificação de leads para vendas e parcerias.
+- `/cto-advisor`: Ativa o conselheiro estratégico para liderança técnica e arquitetura.
 
 ## 📁 Estrutura do Projeto
 
