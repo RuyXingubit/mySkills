@@ -115,6 +115,12 @@ Especialista em integração de sistemas e APIs de terceiros:
 - **Resiliência**: Padrões de retentativa (backoff), circuit breakers e tratamento de erros.
 - **Eficiência**: Gerenciamento de rate limits, paginação e transformação de dados.
 
+### [Mobile Design](file:///Users/ruy/Code/mySkills/docs/mobile-design/SKILL.md)
+Design e desenvolvimento mobile de alta performance:
+- **UX**: Touch-first design, Fitts' Law e otimização da Thumb Zone.
+- **Plataformas**: Convenções específicas para iOS (SwiftUI) e Android (Material 3).
+- **Performance**: Técnicas para 60fps, otimização de listas e gerenciamento de bateria.
+
 ### [Senior DevOps](file:///Users/ruy/Code/mySkills/docs/senior-devops/SKILL.md)
 Automação de infraestrutura e delivery:
 - **IaC**: Scaffolding para Terraform e configurações multi-cloud.
@@ -209,6 +215,7 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/ux-researcher-designer`: Ativa o kit completo de pesquisa e design focado no usuário.
 - `/content-research`: Ativa o parceiro de escrita para pesquisa e criação de conteúdo de alta qualidade.
 - `/api-integration`: Ativa o especialista em integração de APIs e sistemas externos.
+- `/mobile-design`: Ativa o especialista em design e desenvolvimento mobile de alta performance.
 
 ## 📁 Estrutura do Projeto
 
