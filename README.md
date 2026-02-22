@@ -109,6 +109,12 @@ Composição profissional de e-mails para diversos contextos:
 - **Técnico**: Updates de infraestrutura, avisos de manutenção e suporte.
 - **Etiqueta**: Boas práticas de tom, clareza e Call to Action (CTA).
 
+### [API Integration Specialist](file:///Users/ruy/Code/mySkills/docs/api-integration-specialist/SKILL.md)
+Especialista em integração de sistemas e APIs de terceiros:
+- **Segurança**: Implementação de OAuth 2.0, chaves de API e verificação de webhooks.
+- **Resiliência**: Padrões de retentativa (backoff), circuit breakers e tratamento de erros.
+- **Eficiência**: Gerenciamento de rate limits, paginação e transformação de dados.
+
 ### [Senior DevOps](file:///Users/ruy/Code/mySkills/docs/senior-devops/SKILL.md)
 Automação de infraestrutura e delivery:
 - **IaC**: Scaffolding para Terraform e configurações multi-cloud.
@@ -202,6 +208,7 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/senior-devops`: Ativa o especialista em infraestrutura segura e automação de entrega.
 - `/ux-researcher-designer`: Ativa o kit completo de pesquisa e design focado no usuário.
 - `/content-research`: Ativa o parceiro de escrita para pesquisa e criação de conteúdo de alta qualidade.
+- `/api-integration`: Ativa o especialista em integração de APIs e sistemas externos.
 
 ## 📁 Estrutura do Projeto
 
