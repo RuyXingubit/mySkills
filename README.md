@@ -238,19 +238,21 @@ npx @ruyfranca/myskills list
 # 2. Listar todos os agents na biblioteca
 npx @ruyfranca/myskills list-agents
 
-# 3. Instalar uma skill em um novo projeto
-# (Cria automaticamente a pasta .claude/skills/nome-da-skill/)
+# 3. Inicializar kit completo em um novo projeto
+# (Instala a pasta .agent completa com skills, agents e workflows)
+npx @ruyfranca/myskills init
+
+# 4. Instalar uma skill individual
 npx @ruyfranca/myskills add <nome-da-skill>
 
-# 4. Instalar um agent em um novo projeto
-# (Cria automaticamente a pasta .claude/agents/nome-do-agent.md)
+# 5. Instalar um agent individual
 npx @ruyfranca/myskills add <nome-do-agent> --agent
 
-# 5. Instalar TODAS as 40+ skills de uma vez
+# 6. Instalar TODAS as 40+ skills individuais
 npx @ruyfranca/myskills add --all
 
 # Exemplo prático:
-npx @ruyfranca/myskills add pptx
+npx @ruyfranca/myskills init
 npx @ruyfranca/myskills add frontend-developer --agent
 ```
 

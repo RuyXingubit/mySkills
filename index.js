@@ -37,7 +37,7 @@ program
   .description('Lista todos os agents disponíveis na biblioteca')
   .action(async () => {
     if (!await fs.pathExists(AGENTS_DIR)) {
-      console.log(chalk.yellow('\n⚠️ Nanhum agent disponível ainda.\n'));
+      console.log(chalk.yellow('\n⚠️ Nenhum agent disponível ainda.\n'));
       return;
     }
     const agents = await fs.readdir(AGENTS_DIR);
@@ -48,6 +48,25 @@ program
       }
     });
     console.log('');
+  });
+
+program
+  .command('init')
+  .description('Inicializa o Antigravity no projeto atual (instala todas as skills, agents e workflows)')
+  .action(async () => {
+    const sourceDir = path.join(__dirname, '.agent');
+    const destDir = path.join(process.cwd(), '.agent');
+
+    console.log(chalk.cyan('\n🚀 Inicializando kit completo do Antigravity...\n'));
+
+    try {
+      await fs.ensureDir(destDir);
+      await fs.copy(sourceDir, destDir);
+      console.log(chalk.green.bold('✅ Pasta .agent instalada com sucesso!\n'));
+      console.log(chalk.gray('Isso inclui todas as skills, agents e slash commands (workflows).\n'));
+    } catch (err) {
+      console.error(chalk.red(`\n❌ Erro ao inicializar .agent: ${err.message}\n`));
+    }
   });
 
 program
@@ -65,7 +84,7 @@ program
 
       for (const s of skills) {
         const sourceDir = path.join(SKILLS_DIR, s);
-        const destDir = path.join(process.cwd(), '.claude', 'skills', s);
+        const destDir = path.join(process.cwd(), '.agent', 'skills', s);
 
         try {
           await fs.ensureDir(path.dirname(destDir));
@@ -102,12 +121,12 @@ program
       }
 
       const sourceFile = path.join(AGENTS_DIR, `${name}.md`);
-      const destFile = path.join(process.cwd(), '.claude', 'agents', `${name}.md`);
+      const destFile = path.join(process.cwd(), '.agent', 'agents', `${name}.md`);
 
       try {
         await fs.ensureDir(path.dirname(destFile));
         await fs.copy(sourceFile, destFile);
-        console.log(chalk.green(`\n✅ Agent "${name}" instalado com sucesso em .claude/agents/${name}.md!\n`));
+        console.log(chalk.green(`\n✅ Agent "${name}" instalado com sucesso em .agent/agents/${name}.md!\n`));
       } catch (err) {
         console.error(chalk.red(`\n❌ Erro ao copiar agent: ${err.message}\n`));
       }
@@ -137,12 +156,12 @@ program
     }
 
     const sourceDir = path.join(SKILLS_DIR, name);
-    const destDir = path.join(process.cwd(), '.claude', 'skills', name);
+    const destDir = path.join(process.cwd(), '.agent', 'skills', name);
 
     try {
       await fs.ensureDir(path.dirname(destDir));
       await fs.copy(sourceDir, destDir);
-      console.log(chalk.green(`\n✅ Skill "${name}" instalada com sucesso em .claude/skills/${name}!\n`));
+      console.log(chalk.green(`\n✅ Skill "${name}" instalada com sucesso em .agent/skills/${name}!\n`));
     } catch (err) {
       console.error(chalk.red(`\n❌ Erro ao copiar skill: ${err.message}\n`));
     }
