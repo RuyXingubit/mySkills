@@ -35,10 +35,31 @@ program
   .command('add')
   .description('Adiciona uma skill ao projeto atual')
   .argument('[skill]', 'Nome da skill para adicionar')
-  .action(async (skillName) => {
+  .option('-a, --all', 'Adiciona todas as skills disponíveis')
+  .action(async (skillName, options) => {
     const skills = (await fs.readdir(SKILLS_DIR)).filter(s =>
       fs.statSync(path.join(SKILLS_DIR, s)).isDirectory()
     );
+
+    if (options.all) {
+      console.log(chalk.cyan(`\n📦 Instalando todas as ${skills.length} skills...\n`));
+
+      for (const s of skills) {
+        const sourceDir = path.join(SKILLS_DIR, s);
+        const destDir = path.join(process.cwd(), '.claude', 'skills', s);
+
+        try {
+          await fs.ensureDir(path.dirname(destDir));
+          await fs.copy(sourceDir, destDir);
+          console.log(`  - ${chalk.green(s)}: ${chalk.gray('OK')}`);
+        } catch (err) {
+          console.error(chalk.red(`  - ${s}: Erro - ${err.message}`));
+        }
+      }
+
+      console.log(chalk.green.bold('\n✅ Todas as skills foram instaladas com sucesso!\n'));
+      return;
+    }
 
     if (!skillName) {
       const answers = await inquirer.prompt([

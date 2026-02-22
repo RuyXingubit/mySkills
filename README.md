@@ -239,6 +239,9 @@ npx @ruyfranca/myskills list
 # (Cria automaticamente a pasta .claude/skills/nome-da-skill/)
 npx @ruyfranca/myskills add <nome-da-skill>
 
+# 3. Instalar TODAS as 40+ skills de uma vez
+npx @ruyfranca/myskills add --all
+
 # Exemplo prático:
 npx @ruyfranca/myskills add pptx
 ```
