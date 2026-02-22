@@ -115,11 +115,13 @@ Automação de infraestrutura e delivery:
 - **CI/CD**: Geração de pipelines de entrega contínua com foco em qualidade.
 - **Deployment**: Estratégias avançadas de atualização e recuperação de desastres.
 
-### [UX Researcher & Designer](file:///Users/ruy/Code/mySkills/docs/ux-researcher-designer/SKILL.md)
-Estratégia de experiência do usuário baseada em dados:
-- **Personas**: Geração automatizada de personas a partir de dados reais.
-- **Jornada**: Mapeamento de pontos de contato e descoberta de fricções.
 - **Validação**: Frameworks de testes de usabilidade e síntese de pesquisa.
+
+### [Content Research Writer](file:///Users/ruy/Code/mySkills/docs/content-research-writer/SKILL.md)
+Parceiro de pesquisa e redação para conteúdo profissional:
+- **Pesquisa**: Busca de dados, citações e evidências para sustentar argumentos.
+- **Escrita**: Otimização de hooks, feedbacks por seção e preservação de voz.
+- **Estrutura**: Auxílio em outlines, newsletters e documentação técnica.
 
 ### [UI Design System](file:///Users/ruy/Code/mySkills/docs/ui-design-system/SKILL.md)
 Toolkit para sistemas de design e consistência visual:
@@ -199,6 +201,7 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/email-composer`: Ativa o redator especializado em e-mails corporativos e técnicos.
 - `/senior-devops`: Ativa o especialista em infraestrutura segura e automação de entrega.
 - `/ux-researcher-designer`: Ativa o kit completo de pesquisa e design focado no usuário.
+- `/content-research`: Ativa o parceiro de escrita para pesquisa e criação de conteúdo de alta qualidade.
 
 ## 📁 Estrutura do Projeto
 
