@@ -235,15 +235,23 @@ Esta biblioteca de skills pode ser usada em qualquer projeto local sem a necessi
 # 1. Listar todas as skills na biblioteca
 npx @ruyfranca/myskills list
 
-# 2. Instalar uma skill em um novo projeto
+# 2. Listar todos os agents na biblioteca
+npx @ruyfranca/myskills list-agents
+
+# 3. Instalar uma skill em um novo projeto
 # (Cria automaticamente a pasta .claude/skills/nome-da-skill/)
 npx @ruyfranca/myskills add <nome-da-skill>
 
-# 3. Instalar TODAS as 40+ skills de uma vez
+# 4. Instalar um agent em um novo projeto
+# (Cria automaticamente a pasta .claude/agents/nome-do-agent.md)
+npx @ruyfranca/myskills add <nome-do-agent> --agent
+
+# 5. Instalar TODAS as 40+ skills de uma vez
 npx @ruyfranca/myskills add --all
 
 # Exemplo prático:
 npx @ruyfranca/myskills add pptx
+npx @ruyfranca/myskills add frontend-developer --agent
 ```
 
 ---
