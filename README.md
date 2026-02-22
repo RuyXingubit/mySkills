@@ -121,6 +121,12 @@ Design e desenvolvimento mobile de alta performance:
 - **Plataformas**: Convenções específicas para iOS (SwiftUI) e Android (Material 3).
 - **Performance**: Técnicas para 60fps, otimização de listas e gerenciamento de bateria.
 
+### [Senior QA](file:///Users/ruy/Code/mySkills/docs/senior-qa/SKILL.md)
+Garantia de qualidade e automação rigorosa:
+- **Estratégia**: Planejamento de testes seguindo a Pirâmide de Testes.
+- **Automação**: Scaffolding para testes E2E, unitários e de integração.
+- **Análise**: Ferramentas de análise de cobertura e métricas de qualidade.
+
 ### [Senior DevOps](file:///Users/ruy/Code/mySkills/docs/senior-devops/SKILL.md)
 Automação de infraestrutura e delivery:
 - **IaC**: Scaffolding para Terraform e configurações multi-cloud.
@@ -216,6 +222,7 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/content-research`: Ativa o parceiro de escrita para pesquisa e criação de conteúdo de alta qualidade.
 - `/api-integration`: Ativa o especialista em integração de APIs e sistemas externos.
 - `/mobile-design`: Ativa o especialista em design e desenvolvimento mobile de alta performance.
+- `/senior-qa`: Ativa o especialista em garantia de qualidade e automação de testes.
 
 ## 📁 Estrutura do Projeto
 
