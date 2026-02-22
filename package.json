@@ -1,6 +1,6 @@
 {
   "name": "@ruyfranca/myskills",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Biblioteca de skills customizadas para Antigravity / Claude Code",
   "main": "index.js",
   "bin": {
