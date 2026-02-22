@@ -98,6 +98,29 @@ Especialista em otimização para mecanismos de busca:
 ### [UI/UX Pro Max](file:///Users/ruy/Code/mySkills/.agent/skills/ui-ux-pro-max/SKILL.md)
 Inteligência avançada de design e experiência do usuário:
 - **Design System**: Gerador de sistemas de design com base em indústria e estilo.
+
+---
+## 📚 Mais de 70 Skills Especializadas!
+A biblioteca foi expandida massivamente com recursos do Antigravity Kit. Algumas novas categorias incluem:
+
+- **Ecosystems**: [Rust Pro](file:///Users/ruy/Code/mySkills/.agent/skills/rust-pro/SKILL.md), [Python Patterns](file:///Users/ruy/Code/mySkills/.agent/skills/python-patterns/SKILL.md), [MCP Builder](file:///Users/ruy/Code/mySkills/.agent/skills/mcp-builder/SKILL.md).
+- **Architecture**: [Database Design](file:///Users/ruy/Code/mySkills/.agent/skills/database-design/SKILL.md), [Deployment Procedures](file:///Users/ruy/Code/mySkills/.agent/skills/deployment-procedures/SKILL.md), [API Patterns](file:///Users/ruy/Code/mySkills/.agent/skills/api-patterns/SKILL.md).
+- **Frontend & Web**: [Tailwind Patterns](file:///Users/ruy/Code/mySkills/.agent/skills/tailwind-patterns/SKILL.md), [Next.js React Expert](file:///Users/ruy/Code/mySkills/.agent/skills/nextjs-react-expert/SKILL.md), [Web Design Guidelines](file:///Users/ruy/Code/mySkills/.agent/skills/web-design-guidelines/SKILL.md).
+- **Testing & Security**: [Vulnerability Scanner](file:///Users/ruy/Code/mySkills/.agent/skills/vulnerability-scanner/SKILL.md), [Webapp Testing](file:///Users/ruy/Code/mySkills/.agent/skills/webapp-testing/SKILL.md), [Red Team Tactics](file:///Users/ruy/Code/mySkills/.agent/skills/red-team-tactics/SKILL.md).
+- **DevOps & SysAdmin**: [Server Management](file:///Users/ruy/Code/mySkills/.agent/skills/server-management/SKILL.md), [Bash Linux](file:///Users/ruy/Code/mySkills/.agent/skills/bash-linux/SKILL.md), [Powershell Windows](file:///Users/ruy/Code/mySkills/.agent/skills/powershell-windows/SKILL.md).
+
+## 🤖 20+ Agentes Especializados
+Agora você pode contar com um time completo de agentes:
+- **Core Team**: `project-planner`, `orchestrator`, `documentation-writer`.
+- **Development**: `frontend-specialist`, `backend-specialist`, `database-architect`, `mobile-developer`, `game-developer`.
+- **Review & Security**: `security-auditor`, `penetration-tester`, `qa-automation-engineer`.
+- **Optimization**: `performance-optimizer`, `seo-specialist`, `code-archaeologist`.
+
+## ⚡ 50+ Slash Commands (Workflows)
+Integramos todos os fluxos de trabalho essenciais:
+- `/plan`, `/create`, `/debug`, `/test`, `/deploy`, `/enhance`, `/status`, `/orchestrate`, `/preview` e muito mais.
+
+---
 - **Implementação**: Guias para React, Next.js, Vue e Tailwind.
 - **Acessibilidade**: Checklist rigoroso de conformidade WCAG.
 
