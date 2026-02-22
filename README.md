@@ -145,6 +145,12 @@ Liderança técnica estratégica e governança de arquitetura:
 - **Arquitetura**: Gestão de ADRs e revisões sistemáticas de infraestrutura.
 - **Execução**: Escalonamento de times e métricas de excelência (DORA).
 
+### [Clean Code](file:///Users/ruy/Code/mySkills/docs/clean-code/SKILL.md)
+Padrões de codificação pragmáticos e legíveis:
+- **Simplicidade**: Foco em KISS, DRY e YAGNI para evitar over-engineering.
+- **Refatoração**: Uso de cláusulas de guarda e redução de aninhamento (flat code).
+- **Nomes**: Convenções que revelam a intenção do código sem necessidade de comentários.
+
 ### [Senior DevOps](file:///Users/ruy/Code/mySkills/docs/senior-devops/SKILL.md)
 Automação de infraestrutura e delivery:
 - **IaC**: Scaffolding para Terraform e configurações multi-cloud.
@@ -244,6 +250,7 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/writing-plans`: Ativa o arquiteto para criação de planos de implementação detalhados e TDD.
 - `/lead-research`: Ativa o especialista em pesquisa e qualificação de leads para vendas e parcerias.
 - `/cto-advisor`: Ativa o conselheiro estratégico para liderança técnica e arquitetura.
+- `/clean-code`: Ativa o guardião dos padrões de código limpo e pragmático.
 
 ## 📁 Estrutura do Projeto
 
