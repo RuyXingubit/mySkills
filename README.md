@@ -121,6 +121,22 @@ Integramos todos os fluxos de trabalho essenciais:
 - `/plan`, `/create`, `/debug`, `/test`, `/deploy`, `/enhance`, `/status`, `/orchestrate`, `/preview` e muito mais.
 
 ---
+
+## 📜 Regras e Automação de Elite
+Agora incluímos a infraestrutura completa para transformar o assistente em um engenheiro de verdade:
+
+### 🛠️ Scripts de Automação (`.agent/scripts/`)
+Scripts prontos para serem executados pelos agentes:
+- **`checklist.py`**: Executor mestre de verificações (Segurança, Lint, Schema, UX, SEO).
+- **`verify_all.py`**: Suíte completa de validação pré-deploy.
+- **`session_manager.py`**: Analisador de contexto do projeto para o assistente.
+- **`auto_preview.py`**: Gestor de servidor de preview local.
+
+### ⚖️ Protocolos de Inteligência (`.agent/rules/`)
+Regras globais que guiam o comportamento da IA:
+- **`GEMINI.md`**: Define o protocolo "Agent & Skill", garantindo que a IA aplique as skills e use os agentes de forma sistemática e correta.
+
+---
 - **Implementação**: Guias para React, Next.js, Vue e Tailwind.
 - **Acessibilidade**: Checklist rigoroso de conformidade WCAG.
 

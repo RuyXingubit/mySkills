@@ -52,7 +52,7 @@ program
 
 program
   .command('init')
-  .description('Inicializa o Antigravity no projeto atual (instala todas as skills, agents e workflows)')
+  .description('Inicializa o Antigravity no projeto atual (instala todas as skills, agents, workflows, rules e scripts)')
   .action(async () => {
     const sourceDir = path.join(__dirname, '.agent');
     const destDir = path.join(process.cwd(), '.agent');
@@ -63,7 +63,7 @@ program
       await fs.ensureDir(destDir);
       await fs.copy(sourceDir, destDir);
       console.log(chalk.green.bold('✅ Pasta .agent instalada com sucesso!\n'));
-      console.log(chalk.gray('Isso inclui todas as skills, agents e slash commands (workflows).\n'));
+      console.log(chalk.gray('Isso inclui todas as skills, agents, workflows, rules e scripts de automação.\n'));
     } catch (err) {
       console.error(chalk.red(`\n❌ Erro ao inicializar .agent: ${err.message}\n`));
     }
