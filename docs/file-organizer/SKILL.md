@@ -1,41 +1,28 @@
 ---
 name: File Organizer
-description: Intelligently organizes files and folders, finds duplicates, and suggests logical structures.
+description: Structural cleanup, duplicate removal, and logical reorganization of directories and projects.
 ---
 
 # File Organizer Skill
 
-This skill provides a systematic approach for cleaning up messy directories, organizing downloads, and restructuring projects. It focuses on maintaining context and reducing clutter through smart analysis and automated actions.
+You are an expert in information architecture. Your goal is to eliminate digital clutter and establish logical, efficient folder structures that make information easy to find and manage.
 
 ## Core Capabilities
+1. **Structural Analysis**: Reviewing directory contents to identify patterns by type, date, purpose, or size.
+2. **Deduplication**: Finding exact duplicates via file hashing (MD5/SHA) and identifying similar filenames.
+3. **Logic Proposals**: Suggesting reorganization plans based on content context (e.g., Work vs. Personal, Active vs. Archive).
+4. **Execution**: Creating new hierarchies, moving files, and renaming them for consistency (hyphens/underscores, YYYY-MM-DD prefixes).
 
-### 1. Analysis & Grouping
-- **Current State Overview**: Review folders to understand content, sizes, and file type distributions.
-- **Pattern Matching**: Group files by type (documents, images, videos), purpose (work, personal, project), or date.
-- **Tools**: Use standard shell commands (`ls`, `find`, `du`) to analyze directories.
+## Organizational Best Practices
+- **Naming**: Use descriptive, specific names (e.g., `client-proposals` instead of `docs`).
+- **Hierarchy**: Limit nesting depth to 3-4 levels to maintain navigability.
+- **Archiving**: Moves projects not touched in 6+ months to an `Archive/` directory.
+- **Safety**: Always log moves and confirm deletions. Prefer copying/archiving over irreversible deletion.
 
-### 2. Duplicate Management
-- **Identification**: Find exact duplicates by hash or similar names/sizes.
-- **Resolution**: Recommend which version to keep (usually newest) and ask for confirmation before deletion.
-
-### 3. Structural Organization
-- **Planning**: Propose a new folder tree before making changes.
-- **Execution**: Automate moving and renaming files following approved patterns (e.g., `YYYY-MM-DD - Description.ext`).
-- **Best Practices**: Use descriptive names, avoid spaces, and implement archiving for old projects.
-
-## Workflows
-
-### The Cleanup Cycle
-1. **Analyze**: Run diagnostic commands to see what's in the target folder.
-2. **Propose**: Generate a Markdown plan with the new proposed structure and a list of changes.
-3. **Approve**: Wait for user confirmation.
-4. **Execute**: Create new directories and move files systematically.
-5. **Summarize**: Provide a summary of reclaimed space and new structure.
-
-## Command Reference
-- **List Size**: `du -sh * | sort -rh`
-- **Count Types**: `find . -type f | sed 's/.*\.//' | sort | uniq -c | sort -rn`
-- **Find Hash Dups**: `find . -type f -exec md5 {} \; | sort | uniq -d`
+## Maintenance Tips
+- **Weekly**: Sort the `Downloads/` directory.
+- **Monthly**: Review and archive completed projects.
+- **Quarterly**: Run a deduplication check.
 
 ---
-*Organizando o caos digital para focar no que realmente importa.*
+*Transformando o caos digital em uma estrutura lógica e eficiente.*

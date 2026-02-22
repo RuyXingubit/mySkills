@@ -163,6 +163,54 @@ Automação de infraestrutura e delivery:
 - **CI/CD**: Geração de pipelines de entrega contínua com foco em qualidade.
 - **Deployment**: Estratégias avançadas de atualização e recuperação de desastres.
 
+### [Docker Expert](file:///Users/ruy/Code/mySkills/docs/docker-expert/SKILL.md)
+Especialista em conteinerização e orquestração:
+- **Otimização**: Multi-stage builds e redução drástica do tamanho de imagens.
+- **Segurança**: Configuração de usuários não-root e gestão segura de segredos.
+- **Compose**: Orquestração de múltiplos serviços com redes isoladas e healthchecks.
+
+### [Software Architecture](file:///Users/ruy/Code/mySkills/docs/software-architecture/SKILL.md)
+Arquitetura de sistemas e liderança técnica:
+- **Clean Architecture**: Separação clara entre domínio, casos de uso e infraestrutura.
+- **DDD**: Alinhamento do código com as regras de negócio e linguagem ubíqua.
+- **Padrões**: Aplicação sistemática de SOLID, KISS e DRY.
+
+### [NestJS Expert](file:///Users/ruy/Code/mySkills/docs/nestjs/SKILL.md)
+Desenvolvimento backend empresarial com NestJS:
+- **Arquitetura**: Módulos independentes, injeção de dependência e desacoplamento.
+- **Lifecycle**: Uso estratégico de Guards, Interceptors, Pipes e Middleware.
+- **Integração**: Conexão resiliente com Prisma, TypeORM e Mongoose.
+
+### [Next.js Best Practices](file:///Users/ruy/Code/mySkills/docs/nextjs-best-practices/SKILL.md)
+Modernidade em React com App Router:
+- **RSC**: Decisão entre Server e Client Components para performance máxima.
+- **Data Fetching**: Busca de dados no servidor com Streaming e Suspense.
+- **Mutações**: Uso de Server Actions e gerenciamento de estado simplificado.
+
+### [Copywriting](file:///Users/ruy/Code/mySkills/docs/copywriting/SKILL.md)
+Escrita persuasiva para conversão e marketing:
+- **Landing Pages**: Headline, Subhead e CTAs focadas em clareza e ação.
+- **Vendas**: Transformação de funcionalidades em benefícios reais para o cliente.
+- **Psicologia**: Gatilhos mentais e estruturas de convencimento lógico.
+
+### [Executing Marketing Campaigns](file:///Users/ruy/Code/mySkills/docs/marketing-campaigns/SKILL.md)
+Planejamento e execução de campanhas digitais:
+- **Estratégia**: Definição de objetivos, personas e mix de canais (E-mail, Social, Paid).
+- **Conteúdo**: Criação de ativos de campanha alinhados com a identidade da marca.
+- **Analytics**: Monitoramento de conversão, CTR e ROI para otimização em tempo real.
+
+### [Web Performance](file:///Users/ruy/Code/mySkills/docs/web-performance/SKILL.md)
+Otimização profunda de performance web:
+- **Core Web Vitals**: Foco em LCP, FID e CLS para SEO e UX.
+- **Ativos**: Otimização de imagens (WebP/AVIF), responsive design e lazy loading.
+- **Bundle**: Redução de JS, code splitting e estratégias de cache agressivas.
+
+### [Invoice Organizer](file:///Users/ruy/Code/mySkills/docs/invoice-organizer/SKILL.md)
+Organização automatizada de faturas e recibos:
+- **Extração**: Leitura inteligente de fornecedor, data, valor e faturas via OCR.
+- **Estruturação**: Renomeação padronizada e arquivamento por ano/categoria.
+- **Relatórios**: Geração de resumos CSV prontos para a contabilidade.
+
 - **Validação**: Frameworks de testes de usabilidade e síntese de pesquisa.
 
 ### [Content Research Writer](file:///Users/ruy/Code/mySkills/docs/content-research-writer/SKILL.md)
@@ -258,6 +306,14 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/cto-advisor`: Ativa o conselheiro estratégico para liderança técnica e arquitetura.
 - `/clean-code`: Ativa o guardião dos padrões de código limpo e pragmático.
 - `/supabase-postgres`: Ativa o especialista em Postgres e Supabase para otimização e segurança.
+- `/docker`: Ativa o especialista em conteinerização e docker-compose.
+- `/architecture`: Ativa o arquiteto de software para design de sistemas e Clean Architecture.
+- `/nestjs`: Ativa o especialista em NestJS para desenvolvimento backend enterprise.
+- `/nextjs`: Ativa o arquiteto Next.js para aplicações modernas com App Router.
+- `/copywriting`: Ativa o redator focado em conversão e marketing copy.
+- `/marketing-campaigns`: Ativa o gestor de campanhas para planejamento e execução estratégica.
+- `/web-perf`: Ativa o engenheiro de performance para otimização de Core Web Vitals.
+- `/invoice-organizer`: Ativa o assistente de organização financeira e contábil.
 
 ## 📁 Estrutura do Projeto
 
