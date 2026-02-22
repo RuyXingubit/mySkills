@@ -125,6 +125,12 @@ Design e desenvolvimento mobile de alta performance:
 Garantia de qualidade e automação rigorosa:
 - **Estratégia**: Planejamento de testes seguindo a Pirâmide de Testes.
 - **Automação**: Scaffolding para testes E2E, unitários e de integração.
+
+### [Writing Plans](file:///Users/ruy/Code/mySkills/docs/writing-plans/SKILL.md)
+Planejamento detalhado de implementação:
+- **Bite-sized**: Fragmentação de tarefas complexas em ações de 2-5 minutos.
+- **TDD Nativo**: Planos focados em testes falhos antes da implementação.
+- **Precisão**: Documentação exata de arquivos, comandos e snippets para execução direta.
 - **Análise**: Ferramentas de análise de cobertura e métricas de qualidade.
 
 ### [Senior DevOps](file:///Users/ruy/Code/mySkills/docs/senior-devops/SKILL.md)
@@ -223,6 +229,7 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/api-integration`: Ativa o especialista em integração de APIs e sistemas externos.
 - `/mobile-design`: Ativa o especialista em design e desenvolvimento mobile de alta performance.
 - `/senior-qa`: Ativa o especialista em garantia de qualidade e automação de testes.
+- `/writing-plans`: Ativa o arquiteto para criação de planos de implementação detalhados e TDD.
 
 ## 📁 Estrutura do Projeto
 
