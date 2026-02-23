@@ -123,7 +123,7 @@ A biblioteca foi expandida massivamente com recursos do Antigravity Kit. Algumas
 
 ## 🤖 20+ Agentes Especializados
 Agora você pode contar com um time completo de agentes:
-- **Core Team**: `project-planner`, `orchestrator`, `documentation-writer`.
+- **Core Team**: `project-planner`, `orchestrator`, `documentation-writer`, `java-architect`.
 - **Development**: `spring-boot-engineer`, `frontend-specialist`, `backend-specialist`, `database-architect`, `mobile-developer`, `game-developer`.
 - **Review & Security**: `security-auditor`, `penetration-tester`, `qa-automation-engineer`.
 - **Optimization**: `performance-optimizer`, `seo-specialist`, `code-archaeologist`.
@@ -372,6 +372,7 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/supabase-postgres`: Ativa o especialista em Postgres e Supabase para otimização e segurança.
 - `/docker`: Ativa o especialista em conteinerização e docker-compose.
 - `/architecture`: Ativa o arquiteto de software para design de sistemas e Clean Architecture.
+- `/java`: Ativa o arquiteto Java de alta senioridade focado em soluções Enterprise Node, DDD e Microserviços.
 - `/spring-boot`: Ativa o engenheiro Spring Boot para desenvolvimento backend corporativo Java.
 - `/nestjs`: Ativa o especialista em NestJS para desenvolvimento backend enterprise.
 - `/nextjs`: Ativa o arquiteto Next.js para aplicações modernas com App Router.
