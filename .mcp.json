@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "Figma Dev Mode MCP": {
+      "url": "http://127.0.0.1:3845/mcp"
+    }
+  }
+}

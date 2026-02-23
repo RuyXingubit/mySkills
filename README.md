@@ -99,6 +99,12 @@ Especialista em otimização para mecanismos de busca:
 Inteligência avançada de design e experiência do usuário:
 - **Design System**: Gerador de sistemas de design com base em indústria e estilo.
 
+### [Figma Dev Mode](file:///Users/ruy/Code/mySkills/.agent/skills/figma-dev-mode/SKILL.md)
+Integração direta com o Figma através do Model Context Protocol (MCP):
+- **Extração**: Inspeção de nós visuais, tokens de cor, tipografia e espaçamento.
+- **Integração**: Configuração de `.mcp.json` para conectar o Claude/Cursor ao Figma Desktop.
+- **Workflow**: Tradução perfeita do design para código.
+
 ---
 ## 📚 Mais de 70 Skills Especializadas!
 A biblioteca foi expandida massivamente com recursos do Antigravity Kit. Algumas novas categorias incluem:
@@ -366,6 +372,7 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/marketing-campaigns`: Ativa o gestor de campanhas para planejamento e execução estratégica.
 - `/web-perf`: Ativa o engenheiro de performance para otimização de Core Web Vitals.
 - `/invoice-organizer`: Ativa o assistente de organização financeira e contábil.
+- `/figma`: Ativa a integração MCP com o Figma Dev Mode para extração visual.
 
 ## 📁 Estrutura do Projeto
 
