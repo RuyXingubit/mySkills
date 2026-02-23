@@ -381,6 +381,7 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/invoice-organizer`: Ativa o assistente de organização financeira e contábil.
 - `/figma`: Ativa a integração MCP com o Figma Dev Mode para extração visual.
 - `/creative-design-figma`: Ativa a integração MCP Oficial usando tokens de Nuvem do Figma.
+- `/memory-spring-cleaning`: Executa uma varredura para sincronizar código e memória (docs/rules), removendo drift e arquivos legados.
 
 ## 📁 Estrutura do Projeto
 
