@@ -105,6 +105,12 @@ Integração direta com o Figma através do Model Context Protocol (MCP):
 - **Integração**: Configuração de `.mcp.json` para conectar o Claude/Cursor ao Figma Desktop.
 - **Workflow**: Tradução perfeita do design para código.
 
+### [Creative Design Figma](file:///Users/ruy/Code/mySkills/.agent/skills/creative-design-figma/SKILL.md)
+Integração com o Figma Oficial na Nuvem:
+- **Cloud MCP**: Extração de dados da API Oficial do Figma via `FIGMA_OAUTH_TOKEN`.
+- **Flow**: Fluxos estruturados de Contexto Visual (`get_design_context`) e Print de Tela (`get_screenshot`).
+- **Precisão**: Extração limpa de variáveis, componentes e assets (SVGs e imagens).
+
 ---
 ## 📚 Mais de 70 Skills Especializadas!
 A biblioteca foi expandida massivamente com recursos do Antigravity Kit. Algumas novas categorias incluem:
@@ -373,6 +379,7 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/web-perf`: Ativa o engenheiro de performance para otimização de Core Web Vitals.
 - `/invoice-organizer`: Ativa o assistente de organização financeira e contábil.
 - `/figma`: Ativa a integração MCP com o Figma Dev Mode para extração visual.
+- `/creative-design-figma`: Ativa a integração MCP Oficial usando tokens de Nuvem do Figma.
 
 ## 📁 Estrutura do Projeto
 
