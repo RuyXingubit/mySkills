@@ -1,6 +1,21 @@
 # mySkills
 
-Este repositório contém uma coleção de skills especializadas para o **Antigravity**, projetadas para estender as capacidades do assistente em áreas específicas como gestão de produtos, marketing e negócios.
+Biblioteca de skills, agents e workflows especializados para o **Antigravity**.
+
+## ⚡ Quick Start
+
+> Execute esses dois comandos em qualquer projeto para ativar o kit completo:
+
+```bash
+npx @ruyfranca/myskills init && npx @ruyfranca/myskills install-global
+```
+
+- `init` → instala a pasta `.agent/` (skills, agents, workflows) no projeto atual
+- `install-global` → instala os workflows em `~/.gemini/antigravity/global_workflows/` para o menu `/` do Antigravity
+
+> **Após rodar, feche e reabra o Antigravity.** Os comandos `/brainstorm`, `/debug`, `/plan` e todos os outros estarão disponíveis.
+
+---
 
 ## 🚀 Skills Disponíveis
 
@@ -131,6 +146,29 @@ Agora você pode contar com um time completo de agentes:
 ## ⚡ 50+ Slash Commands (Workflows)
 Integramos todos os fluxos de trabalho essenciais:
 - `/plan`, `/create`, `/debug`, `/test`, `/deploy`, `/enhance`, `/status`, `/orchestrate`, `/preview` e muito mais.
+
+---
+
+## 🆕 Skills da Comunidade (sickn33/antigravity-awesome-skills)
+Skills adicionadas da coleção curada do repositório externo:
+
+### [Analyze Project](file:///Users/ruy/Code/mySkills/.agent/skills/analyze-project/SKILL.md)
+Analisador forense de sessões do Antigravity:
+- **Diagnóstico**: Identifica causas raiz de problemas nas sessões (agente, usuário, repositório).
+- **Padrões**: Classifica o "shape" do retrabalho (limpo, expansão de escopo, churn, etc.).
+- **Relatório**: Gera `session_analysis_report.md` com insights e recomendações acionáveis.
+
+### [Leiloeiro Risco](file:///Users/ruy/Code/mySkills/.agent/skills/leiloeiro-risco/SKILL.md)
+Auditor de risco sênior em leilões de imóveis (pt-BR):
+- **Score**: Sistema de pontuação de 36 pontos (jurídico, financeiro, operacional, mercado).
+- **Stress Test**: Análise em 4 cenários (otimista, base, pessimista, catastrófico) com ROI ponderado.
+- **Decisão**: Árvore de decisão clara com limites de score para arrematar ou não.
+
+### [Antigravity Design Expert](file:///Users/ruy/Code/mySkills/.agent/skills/antigravity-design-expert/SKILL.md)
+Especialista em UI/UX glassmorphism e design espacial:
+- **Estética**: Interfaces flutuantes com glassmorphism, profundidade 3D e perspectiva isométrica.
+- **Animação**: GSAP + ScrollTrigger para animações suaves vinculadas ao scroll.
+- **Performance**: `will-change: transform`, GPU offloading, `prefers-reduced-motion` respeitado.
 
 ---
 
@@ -278,33 +316,48 @@ Toolkit para sistemas de design e consistência visual:
 
 ## 📦 Instalação e Uso via NPX
 
-Esta biblioteca de skills pode ser usada em qualquer projeto local sem a necessidade de clonar o repositório manualmente.
+Esta biblioteca pode ser usada em qualquer projeto sem clonar o repositório.
 
-### Comandos Disponíveis
+### 🏁 Primeiros Passos (Recomendado)
 
 ```bash
-# 1. Listar todas as skills na biblioteca
+# Instala o kit completo + ativa o menu / no Antigravity
+npx @ruyfranca/myskills init && npx @ruyfranca/myskills install-global
+```
+
+Após executar, **feche e reabra o Antigravity**. Os slash commands (`/brainstorm`, `/debug`, `/plan`, etc.) estarão disponíveis em qualquer projeto.
+
+### Todos os Comandos
+
+```bash
+# Listar skills disponíveis
 npx @ruyfranca/myskills list
 
-# 2. Listar todos os agents na biblioteca
+# Listar agents disponíveis
 npx @ruyfranca/myskills list-agents
 
-# 3. Inicializar kit completo em um novo projeto
-# (Instala a pasta .agent completa com skills, agents e workflows)
+# Inicializar kit completo no projeto atual (.agent/ com skills, agents, workflows)
 npx @ruyfranca/myskills init
 
-# 4. Instalar uma skill individual
+# 🌐 Ativar o menu / do Antigravity com todos os workflows (roda uma vez por máquina)
+npx @ruyfranca/myskills install-global
+
+# Instalar uma skill individual
 npx @ruyfranca/myskills add <nome-da-skill>
 
-# 5. Instalar um agent individual
+# Instalar um agent individual
 npx @ruyfranca/myskills add <nome-do-agent> --agent
 
-# 6. Instalar TODAS as 40+ skills individuais
+# Instalar todas as 40+ skills
 npx @ruyfranca/myskills add --all
 
-# Exemplo prático:
-npx @ruyfranca/myskills init
-npx @ruyfranca/myskills add frontend-developer --agent
+# Atualizar o kit no projeto atual (skills + agents + workflows + global_workflows)
+npx @ruyfranca/myskills update
+
+# Atualizar apenas um componente específico:
+npx @ruyfranca/myskills update --skills
+npx @ruyfranca/myskills update --agents
+npx @ruyfranca/myskills update --workflows
 ```
 
 ---

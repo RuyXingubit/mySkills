@@ -1,6 +1,6 @@
 {
   "name": "@ruyfranca/myskills",
-  "version": "1.0.22",
+  "version": "1.0.29",
   "description": "Biblioteca de skills customizadas para Antigravity / Claude Code",
   "main": "index.js",
   "bin": {
@@ -8,7 +8,8 @@
   },
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update": "node index.js update"
   },
   "keywords": [
     "claude",
