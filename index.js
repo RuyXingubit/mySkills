@@ -54,18 +54,33 @@ program
   .command('init')
   .description('Inicializa o Antigravity no projeto atual (instala todas as skills, agents, workflows, rules e scripts)')
   .action(async () => {
-    const sourceDir = path.join(__dirname, '.agent');
-    const destDir = path.join(process.cwd(), '.agent');
+    const destRoot = process.cwd();
+    const sourceAgentDir = path.join(__dirname, '.agent');
+    const destAgentDir = path.join(destRoot, '.agent');
 
     console.log(chalk.cyan('\n🚀 Inicializando kit completo do Antigravity...\n'));
 
     try {
-      await fs.ensureDir(destDir);
-      await fs.copy(sourceDir, destDir);
-      console.log(chalk.green.bold('✅ Pasta .agent instalada com sucesso!\n'));
-      console.log(chalk.gray('Isso inclui todas as skills, agents, workflows, rules e scripts de automação.\n'));
+      // Copy .agent/ folder (skills, agents, workflows, rules, scripts)
+      await fs.ensureDir(destAgentDir);
+      await fs.copy(sourceAgentDir, destAgentDir);
+      console.log(chalk.green('  ✅ Pasta .agent instalada!'));
+
+      // Copy root rule files so Antigravity picks them up automatically
+      const rootRuleFiles = ['AGENTS.md', 'GEMINI.md'];
+      for (const ruleFile of rootRuleFiles) {
+        const src = path.join(__dirname, ruleFile);
+        const dest = path.join(destRoot, ruleFile);
+        if (await fs.pathExists(src)) {
+          await fs.copy(src, dest, { overwrite: true });
+          console.log(chalk.green(`  ✅ ${ruleFile} instalado na raiz!`));
+        }
+      }
+
+      console.log(chalk.green.bold('\n✅ Kit inicializado com sucesso!\n'));
+      console.log(chalk.gray('Inclui: skills, agents, workflows, rules, scripts e AGENTS.md na raiz.\n'));
     } catch (err) {
-      console.error(chalk.red(`\n❌ Erro ao inicializar .agent: ${err.message}\n`));
+      console.error(chalk.red(`\n❌ Erro ao inicializar: ${err.message}\n`));
     }
   });
 
@@ -167,4 +182,170 @@ program
     }
   });
 
+program
+  .command('update')
+  .description('Atualiza skills, agents, workflows e rules do projeto atual com a versão mais recente do kit')
+  .option('-s, --skills', 'Atualiza apenas as skills')
+  .option('-a, --agents', 'Atualiza apenas os agents')
+  .option('-w, --workflows', 'Atualiza apenas os workflows')
+  .option('-r, --rules', 'Atualiza apenas os arquivos de rules (AGENTS.md, GEMINI.md)')
+  .action(async (options) => {
+    const updateAll = !options.skills && !options.agents && !options.workflows && !options.rules;
+    const destRoot = process.cwd();
+    const srcRoot = __dirname;
+
+    console.log(chalk.cyan('\n🔄 Atualizando kit do Antigravity...\n'));
+
+    const tasks = [];
+
+    if (updateAll || options.skills) {
+      tasks.push({ label: 'skills', src: path.join(srcRoot, '.agent', 'skills'), dest: path.join(destRoot, '.agent', 'skills') });
+    }
+    if (updateAll || options.agents) {
+      tasks.push({ label: 'agents', src: path.join(srcRoot, '.agent', 'agents'), dest: path.join(destRoot, '.agent', 'agents') });
+    }
+    if (updateAll || options.workflows) {
+      tasks.push({ label: 'workflows', src: path.join(srcRoot, '.agent', 'workflows'), dest: path.join(destRoot, '.agent', 'workflows') });
+    }
+
+    for (const task of tasks) {
+      if (!await fs.pathExists(task.src)) {
+        console.log(chalk.yellow(`  ⚠️ Fonte não encontrada: ${task.label} (${task.src})`));
+        continue;
+      }
+      try {
+        await fs.ensureDir(task.dest);
+        await fs.copy(task.src, task.dest, { overwrite: true });
+        console.log(chalk.green(`  ✅ ${task.label}: copiado`));
+      } catch (err) {
+        console.error(chalk.red(`  ❌ ${task.label}: erro na cópia — ${err.message}`));
+        continue;
+      }
+    }
+
+    // Rewrite hardcoded paths (file:///...mySkills...) to point to the dest project
+    if (destRoot !== srcRoot) {
+      console.log(chalk.cyan('\n🔧 Corrigindo paths nos arquivos copiados...\n'));
+
+      const srcPathEncoded = `file://${srcRoot}`;
+      const destPathEncoded = `file://${destRoot}`;
+
+      const dirsToFix = [
+        path.join(destRoot, '.agent', 'workflows'),
+        path.join(destRoot, '.agent', 'agents'),
+        path.join(destRoot, '.agent', 'rules'),
+        path.join(destRoot, '.agent', 'skills'),
+      ];
+
+      let fixedFiles = 0;
+
+      for (const dir of dirsToFix) {
+        if (!await fs.pathExists(dir)) continue;
+
+        const walk = async (currentDir) => {
+          const entries = await fs.readdir(currentDir, { withFileTypes: true });
+          for (const entry of entries) {
+            const fullPath = path.join(currentDir, entry.name);
+            if (entry.isDirectory()) {
+              await walk(fullPath);
+            } else if (['.md', '.txt', '.json'].includes(path.extname(entry.name))) {
+              try {
+                const content = await fs.readFile(fullPath, 'utf8');
+                if (content.includes(srcPathEncoded)) {
+                  const fixed = content.replaceAll(srcPathEncoded, destPathEncoded);
+                  await fs.writeFile(fullPath, fixed, 'utf8');
+                  fixedFiles++;
+                }
+              } catch {
+                // ignorar arquivos binários ou inacessíveis
+              }
+            }
+          }
+        };
+
+        await walk(dir);
+      }
+
+      if (fixedFiles > 0) {
+        console.log(chalk.green(`  ✅ paths: ${fixedFiles} arquivo(s) corrigido(s)`));
+      } else {
+        console.log(chalk.gray('  ℹ️  paths: nenhuma substituição necessária'));
+      }
+    }
+
+    // Update root rule files (AGENTS.md, GEMINI.md)
+    if (updateAll || options.rules) {
+      const rootRuleFiles = ['AGENTS.md', 'GEMINI.md'];
+      for (const ruleFile of rootRuleFiles) {
+        const src = path.join(srcRoot, ruleFile);
+        const dest = path.join(destRoot, ruleFile);
+        if (await fs.pathExists(src)) {
+          try {
+            await fs.copy(src, dest, { overwrite: true });
+            console.log(chalk.green(`  ✅ ${ruleFile}: atualizado na raiz`));
+          } catch (err) {
+            console.error(chalk.red(`  ❌ ${ruleFile}: ${err.message}`));
+          }
+        }
+      }
+    }
+
+    // Instalar workflows globalmente para aparecerem no / do Antigravity
+    if (updateAll || options.workflows) {
+      const homeDir = process.env.HOME || process.env.USERPROFILE || '';
+      const globalWorkflowsDir = path.join(homeDir, '.gemini', 'antigravity', 'global_workflows');
+      const workflowsSrc = path.join(srcRoot, '.agent', 'workflows');
+
+      if (await fs.pathExists(workflowsSrc)) {
+        try {
+          await fs.ensureDir(globalWorkflowsDir);
+          const files = await fs.readdir(workflowsSrc);
+          let copied = 0;
+          for (const file of files) {
+            if (file.endsWith('.md')) {
+              await fs.copy(path.join(workflowsSrc, file), path.join(globalWorkflowsDir, file), { overwrite: true });
+              copied++;
+            }
+          }
+          console.log(chalk.green(`  ✅ global_workflows: ${copied} workflow(s) instalados em ~/.gemini/antigravity/global_workflows/`));
+        } catch (err) {
+          console.log(chalk.yellow(`  ⚠️  global_workflows: ${err.message}`));
+        }
+      }
+    }
+
+    console.log(chalk.cyan.bold('\n✨ Atualização concluída!\n'));
+    console.log(chalk.gray('💡 Dica: reinicie o Antigravity para que o / exiba os workflows.\n'));
+  });
+
+program
+  .command('install-global')
+  .description('Instala os workflows globalmente para aparecerem no / em qualquer projeto do Antigravity')
+  .action(async () => {
+    const homeDir = process.env.HOME || process.env.USERPROFILE || '';
+    const globalWorkflowsDir = path.join(homeDir, '.gemini', 'antigravity', 'global_workflows');
+    const workflowsSrc = path.join(__dirname, '.agent', 'workflows');
+
+    console.log(chalk.cyan('\n🌐 Instalando workflows globalmente...\n'));
+
+    try {
+      await fs.ensureDir(globalWorkflowsDir);
+      const files = await fs.readdir(workflowsSrc);
+      let copied = 0;
+      for (const file of files) {
+        if (file.endsWith('.md')) {
+          await fs.copy(path.join(workflowsSrc, file), path.join(globalWorkflowsDir, file), { overwrite: true });
+          copied++;
+        }
+      }
+      console.log(chalk.green(`  ✅ ${copied} workflows instalados em ${globalWorkflowsDir}`));
+      console.log(chalk.cyan.bold('\n✨ Feito! Reinicie o Antigravity e use / para ver os workflows.\n'));
+    } catch (err) {
+      console.error(chalk.red(`  ❌ Erro: ${err.message}`));
+    }
+  });
+
+
+
 program.parse();
+
