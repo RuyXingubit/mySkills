@@ -222,6 +222,12 @@ Planejamento detalhado de implementação:
 - **Precisão**: Documentação exata de arquivos, comandos e snippets para execução direta.
 - **Análise**: Ferramentas de análise de cobertura e métricas de qualidade.
 
+### [SDD Spec Writer](file:///Users/ruy/Code/mySkills/.agent/skills/sdd-spec-writer/SKILL.md)
+Especialista em Spec-Driven Development (SDD):
+- **Contratos Claros**: Cria specs executáveis com precisão milimétrica.
+- **Decisão Guiada**: Analisa complexidade para decidir entre execução via Humanos vs IAs.
+- **Checklist de Validação**: Garante cobertura de edge cases e caminhos de erro obrigatórios.
+
 ### [Lead Research Assistant](file:///Users/ruy/Code/mySkills/.agent/skills/lead-research-assistant/SKILL.md)
 Inteligência comercial e qualificação de leads:
 - **Prospecção**: Busca ativa de empresas que se encaixam no Perfil de Cliente Ideal (ICP).
@@ -436,6 +442,7 @@ Você pode acessar as skills diretamente via comandos de barra no chat:
 - `/figma`: Ativa a integração MCP com o Figma Dev Mode para extração visual.
 - `/creative-design-figma`: Ativa a integração MCP Oficial usando tokens de Nuvem do Figma.
 - `/memory-spring-cleaning`: Executa uma varredura para sincronizar código e memória (docs/rules), removendo drift e arquivos legados.
+- `/sdd-spec`: Ativa o gerador de especificações baseadas em Spec-Driven Development (SDD).
 
 ## 📁 Estrutura do Projeto
 
