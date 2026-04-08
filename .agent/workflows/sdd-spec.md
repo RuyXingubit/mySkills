@@ -1,5 +1,5 @@
 ---
-description: Spec-Driven Development format. Create a clear spec contract for a task.
+description: "Spec-Driven Development format. Create a clear spec contract for a task."
 ---
 
 # /sdd-spec Workflow

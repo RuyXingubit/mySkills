@@ -1,6 +1,6 @@
 ---
-name: SDD Spec Writer
-description: Specification writing methodology for Spec-Driven Development (SDD)
+name: "SDD Spec Writer"
+description: "Specification writing methodology for Spec-Driven Development (SDD)"
 ---
 
 # SDD Spec Writer Skill

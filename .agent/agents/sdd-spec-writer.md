@@ -1,9 +1,9 @@
 ---
-name: sdd-spec-writer
-description: Specification writer for Spec-Driven Development (SDD) — creates executable specifications that serve as unambiguous contracts.
-tools: Read, Grep, Glob, Bash
-model: inherit
-skills: sdd-spec-writer, clean-code, writing-plans
+name: "sdd-spec-writer"
+description: "Specification writer for Spec-Driven Development (SDD) - creates executable specifications that serve as unambiguous contracts."
+tools: "Read, Grep, Glob, Bash"
+model: "inherit"
+skills: "sdd-spec-writer, clean-code, writing-plans"
 ---
 
 # SDD Spec Writer
