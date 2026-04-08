@@ -2,10 +2,11 @@
 
 import { Command } from 'commander';
 import chalk from 'chalk';
-import fs from 'fs-extra';
+import fs from 'fs/promises';
+import { existsSync, statSync } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import inquirer from 'inquirer';
+import * as readline from 'readline/promises';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const program = new Command();
@@ -18,6 +19,38 @@ program
   .description('CLI para gerenciar e instalar skills e agents do Antigravity')
   .version('1.0.34');
 
+// Helper para copiar pastas recursivamente
+async function copyRecursively(src, dest) {
+  const stat = await fs.stat(src);
+  if (stat.isDirectory()) {
+    await fs.mkdir(dest, { recursive: true });
+    const entries = await fs.readdir(src);
+    for (const entry of entries) {
+      await copyRecursively(path.join(src, entry), path.join(dest, entry));
+    }
+  } else {
+    // Para simplificar, substitui se existir
+    await fs.copyFile(src, dest);
+  }
+}
+
+// Helper para substituir inquirer.prompt
+async function promptList(message, choices) {
+  const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+  console.log(chalk.bold(`\n${message}`));
+  choices.forEach((c, idx) => console.log(`  ${chalk.cyan(idx + 1)}) ${c}`));
+  
+  while (true) {
+    const answer = await rl.question(chalk.yellow('\nDigite o número da opção desejada: '));
+    const num = parseInt(answer.trim(), 10);
+    if (!isNaN(num) && num > 0 && num <= choices.length) {
+      rl.close();
+      return choices[num - 1];
+    }
+    console.log(chalk.red('❌ Opção inválida, tente novamente digitando o número correspondente.'));
+  }
+}
+
 program
   .command('list')
   .description('Lista todas as skills disponíveis na biblioteca')
@@ -25,7 +58,7 @@ program
     const skills = await fs.readdir(SKILLS_DIR);
     console.log(chalk.cyan.bold('\n🚀 Skills Disponíveis:\n'));
     skills.forEach(skill => {
-      if (fs.statSync(path.join(SKILLS_DIR, skill)).isDirectory()) {
+      if (statSync(path.join(SKILLS_DIR, skill)).isDirectory()) {
         console.log(`  - ${chalk.green(skill)}`);
       }
     });
@@ -36,7 +69,7 @@ program
   .command('list-agents')
   .description('Lista todos os agents disponíveis na biblioteca')
   .action(async () => {
-    if (!await fs.pathExists(AGENTS_DIR)) {
+    if (!existsSync(AGENTS_DIR)) {
       console.log(chalk.yellow('\n⚠️ Nenhum agent disponível ainda.\n'));
       return;
     }
@@ -61,18 +94,16 @@ program
     console.log(chalk.cyan('\n🚀 Inicializando kit completo do Antigravity...\n'));
 
     try {
-      // Copy .agent/ folder (skills, agents, workflows, rules, scripts)
-      await fs.ensureDir(destAgentDir);
-      await fs.copy(sourceAgentDir, destAgentDir);
+      await fs.mkdir(destAgentDir, { recursive: true });
+      await copyRecursively(sourceAgentDir, destAgentDir);
       console.log(chalk.green('  ✅ Pasta .agent instalada!'));
 
-      // Copy root rule files so Antigravity picks them up automatically
       const rootRuleFiles = ['AGENTS.md', 'GEMINI.md'];
       for (const ruleFile of rootRuleFiles) {
         const src = path.join(__dirname, ruleFile);
         const dest = path.join(destRoot, ruleFile);
-        if (await fs.pathExists(src)) {
-          await fs.copy(src, dest, { overwrite: true });
+        if (existsSync(src)) {
+          await copyRecursively(src, dest);
           console.log(chalk.green(`  ✅ ${ruleFile} instalado na raiz!`));
         }
       }
@@ -93,7 +124,7 @@ program
   .action(async (name, options) => {
     if (options.all) {
       const skills = (await fs.readdir(SKILLS_DIR)).filter(s =>
-        fs.statSync(path.join(SKILLS_DIR, s)).isDirectory()
+        statSync(path.join(SKILLS_DIR, s)).isDirectory()
       );
       console.log(chalk.cyan(`\n📦 Instalando todas as ${skills.length} skills...\n`));
 
@@ -102,8 +133,8 @@ program
         const destDir = path.join(process.cwd(), '.agent', 'skills', s);
 
         try {
-          await fs.ensureDir(path.dirname(destDir));
-          await fs.copy(sourceDir, destDir);
+          await fs.mkdir(path.dirname(destDir), { recursive: true });
+          await copyRecursively(sourceDir, destDir);
           console.log(`  - ${chalk.green(s)}: ${chalk.gray('OK')}`);
         } catch (err) {
           console.error(chalk.red(`  - ${s}: Erro - ${err.message}`));
@@ -119,15 +150,7 @@ program
       const agentNames = agents.map(a => a.replace('.md', ''));
 
       if (!name) {
-        const answers = await inquirer.prompt([
-          {
-            type: 'list',
-            name: 'selectedAgent',
-            message: 'Qual agent você deseja adicionar?',
-            choices: agentNames
-          }
-        ]);
-        name = answers.selectedAgent;
+        name = await promptList('📋 Qual agent você deseja adicionar?', agentNames);
       }
 
       if (!agentNames.includes(name)) {
@@ -139,8 +162,8 @@ program
       const destFile = path.join(process.cwd(), '.agent', 'agents', `${name}.md`);
 
       try {
-        await fs.ensureDir(path.dirname(destFile));
-        await fs.copy(sourceFile, destFile);
+        await fs.mkdir(path.dirname(destFile), { recursive: true });
+        await copyRecursively(sourceFile, destFile);
         console.log(chalk.green(`\n✅ Agent "${name}" instalado com sucesso em .agent/agents/${name}.md!\n`));
       } catch (err) {
         console.error(chalk.red(`\n❌ Erro ao copiar agent: ${err.message}\n`));
@@ -150,19 +173,11 @@ program
 
     // Default: Skill
     const skills = (await fs.readdir(SKILLS_DIR)).filter(s =>
-      fs.statSync(path.join(SKILLS_DIR, s)).isDirectory()
+      statSync(path.join(SKILLS_DIR, s)).isDirectory()
     );
 
     if (!name) {
-      const answers = await inquirer.prompt([
-        {
-          type: 'list',
-          name: 'selectedSkill',
-          message: 'Qual skill você deseja adicionar?',
-          choices: skills
-        }
-      ]);
-      name = answers.selectedSkill;
+      name = await promptList('📋 Qual skill você deseja adicionar?', skills);
     }
 
     if (!skills.includes(name)) {
@@ -174,8 +189,8 @@ program
     const destDir = path.join(process.cwd(), '.agent', 'skills', name);
 
     try {
-      await fs.ensureDir(path.dirname(destDir));
-      await fs.copy(sourceDir, destDir);
+      await fs.mkdir(path.dirname(destDir), { recursive: true });
+      await copyRecursively(sourceDir, destDir);
       console.log(chalk.green(`\n✅ Skill "${name}" instalada com sucesso em .agent/skills/${name}!\n`));
     } catch (err) {
       console.error(chalk.red(`\n❌ Erro ao copiar skill: ${err.message}\n`));
@@ -209,13 +224,13 @@ program
     }
 
     for (const task of tasks) {
-      if (!await fs.pathExists(task.src)) {
+      if (!existsSync(task.src)) {
         console.log(chalk.yellow(`  ⚠️ Fonte não encontrada: ${task.label} (${task.src})`));
         continue;
       }
       try {
-        await fs.ensureDir(task.dest);
-        await fs.copy(task.src, task.dest, { overwrite: true });
+        await fs.mkdir(task.dest, { recursive: true });
+        await copyRecursively(task.src, task.dest);
         console.log(chalk.green(`  ✅ ${task.label}: copiado`));
       } catch (err) {
         console.error(chalk.red(`  ❌ ${task.label}: erro na cópia — ${err.message}`));
@@ -223,7 +238,6 @@ program
       }
     }
 
-    // Rewrite hardcoded paths (file:///...mySkills...) to point to the dest project
     if (destRoot !== srcRoot) {
       console.log(chalk.cyan('\n🔧 Corrigindo paths nos arquivos copiados...\n'));
 
@@ -240,7 +254,7 @@ program
       let fixedFiles = 0;
 
       for (const dir of dirsToFix) {
-        if (!await fs.pathExists(dir)) continue;
+        if (!existsSync(dir)) continue;
 
         const walk = async (currentDir) => {
           const entries = await fs.readdir(currentDir, { withFileTypes: true });
@@ -257,7 +271,7 @@ program
                   fixedFiles++;
                 }
               } catch {
-                // ignorar arquivos binários ou inacessíveis
+                // ignorar
               }
             }
           }
@@ -273,15 +287,14 @@ program
       }
     }
 
-    // Update root rule files (AGENTS.md, GEMINI.md)
     if (updateAll || options.rules) {
       const rootRuleFiles = ['AGENTS.md', 'GEMINI.md'];
       for (const ruleFile of rootRuleFiles) {
         const src = path.join(srcRoot, ruleFile);
         const dest = path.join(destRoot, ruleFile);
-        if (await fs.pathExists(src)) {
+        if (existsSync(src)) {
           try {
-            await fs.copy(src, dest, { overwrite: true });
+            await copyRecursively(src, dest);
             console.log(chalk.green(`  ✅ ${ruleFile}: atualizado na raiz`));
           } catch (err) {
             console.error(chalk.red(`  ❌ ${ruleFile}: ${err.message}`));
@@ -290,20 +303,19 @@ program
       }
     }
 
-    // Instalar workflows globalmente para aparecerem no / do Antigravity
     if (updateAll || options.workflows) {
       const homeDir = process.env.HOME || process.env.USERPROFILE || '';
       const globalWorkflowsDir = path.join(homeDir, '.gemini', 'antigravity', 'global_workflows');
       const workflowsSrc = path.join(srcRoot, '.agent', 'workflows');
 
-      if (await fs.pathExists(workflowsSrc)) {
+      if (existsSync(workflowsSrc)) {
         try {
-          await fs.ensureDir(globalWorkflowsDir);
+          await fs.mkdir(globalWorkflowsDir, { recursive: true });
           const files = await fs.readdir(workflowsSrc);
           let copied = 0;
           for (const file of files) {
             if (file.endsWith('.md')) {
-              await fs.copy(path.join(workflowsSrc, file), path.join(globalWorkflowsDir, file), { overwrite: true });
+              await copyRecursively(path.join(workflowsSrc, file), path.join(globalWorkflowsDir, file));
               copied++;
             }
           }
@@ -315,7 +327,6 @@ program
     }
 
     console.log(chalk.cyan.bold('\n✨ Atualização concluída!\n'));
-    console.log(chalk.gray('💡 Dica: reinicie o Antigravity para que o / exiba os workflows.\n'));
   });
 
 program
@@ -329,12 +340,12 @@ program
     console.log(chalk.cyan('\n🌐 Instalando workflows globalmente...\n'));
 
     try {
-      await fs.ensureDir(globalWorkflowsDir);
+      await fs.mkdir(globalWorkflowsDir, { recursive: true });
       const files = await fs.readdir(workflowsSrc);
       let copied = 0;
       for (const file of files) {
         if (file.endsWith('.md')) {
-          await fs.copy(path.join(workflowsSrc, file), path.join(globalWorkflowsDir, file), { overwrite: true });
+          await copyRecursively(path.join(workflowsSrc, file), path.join(globalWorkflowsDir, file));
           copied++;
         }
       }
@@ -345,7 +356,4 @@ program
     }
   });
 
-
-
 program.parse();
-

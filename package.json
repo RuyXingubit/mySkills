@@ -1,6 +1,6 @@
 {
   "name": "@ruyfranca/myskills",
-  "version": "1.0.34",
+  "version": "1.0.35",
   "description": "Biblioteca de skills customizadas para Antigravity / Claude Code",
   "main": "index.js",
   "bin": {
@@ -21,8 +21,6 @@
   "license": "MIT",
   "dependencies": {
     "chalk": "^5.3.0",
-    "commander": "^12.0.0",
-    "fs-extra": "^11.2.0",
-    "inquirer": "^9.2.15"
+    "commander": "^12.0.0"
   }
 }
