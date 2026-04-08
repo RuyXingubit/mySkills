@@ -366,6 +366,23 @@ npx @ruyfranca/myskills update --agents
 npx @ruyfranca/myskills update --workflows
 ```
 
+### 🚨 Resolução de Problemas (Troubleshooting)
+
+**Erro no Antigravity: `ConnectError: [unknown] Failed to fetch` ou crash de inicialização**
+
+Se após utilizar o `install-global` o seu Antigravity parar de funcionar com um erro de *Skills Configuration* ou *Failed to load MCP servers*, **não se desespere**, você não perdeu seu histórico. Isso ocorria em versões anteriores (`<= 1.0.31`) devido a um parser interno do Antigravity que rejeitava arquivos `.md` com cabeçalhos estruturais YAML duplicados.
+
+**Como resolver de vez o lado do cliente:**
+1. Apague apenas a pasta global de workflows que está engasgando o backend:
+   - **Mac/Linux**: `rm -rf ~/.gemini/antigravity/global_workflows`
+   - **Windows PowerShell**: `Remove-Item -Recurse -Force ~\.gemini\antigravity\global_workflows`
+2. Pressione `Cmd+R` (ou `Ctrl+R`) no Antigravity e verifique que ele voltou ao normal e ligou com sucesso.
+3. Agora rode o comando com a versão atualizada (a partir de `1.0.32` já contém a correção embutida):
+   ```bash
+   npx @ruyfranca/myskills@latest install-global
+   ```
+O Antigravity vai reiniciar perfeitamente já com seus global workflows ativos!
+
 ---
 
 ## 🔄 Fluxo de Atualização (Para Desenvolvedores)

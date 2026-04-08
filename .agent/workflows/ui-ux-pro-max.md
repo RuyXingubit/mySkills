@@ -1,9 +1,5 @@
 ---
-description: Plan and implement UI
----
-
----
-description: AI-powered design intelligence with 50+ styles, 95+ color palettes, and automated design system generation
+description: AI-powered design intelligence with 50+ styles, 95+ color palettes, and automated design system generation, Plan and implement UI
 ---
 
 # ui-ux-pro-max

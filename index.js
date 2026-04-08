@@ -16,7 +16,7 @@ const AGENTS_DIR = path.join(__dirname, '.agent', 'agents');
 program
   .name('myskills')
   .description('CLI para gerenciar e instalar skills e agents do Antigravity')
-  .version('1.0.23');
+  .version('1.0.32');
 
 program
   .command('list')
