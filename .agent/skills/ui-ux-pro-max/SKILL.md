@@ -1,8 +1,11 @@
 ---
 name: UI/UX Pro Max
-description: Advanced design intelligence with 50+ styles, 97 color palettes, and stack-specific implementation guides.
+description: ""Advanced design intelligence with 50+ styles, 97 color palettes, and stack-specific implementation guides.""
+triggers: [design, design de interface, espaçamento, experiência do usuário, interface de usuário, sistema de design, tipografia, ui, ux]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # UI/UX Pro Max Skill
 
 This skill represents a comprehensive design intelligence system for building professional, accessible, and high-performance user interfaces across multiple technology stacks (React, Next.js, Vue, Svelte, Tailwind, etc.).

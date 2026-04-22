@@ -1,8 +1,11 @@
 ---
 name: Executing Marketing Campaigns
-description: Planning, creation, and optimization of marketing campaigns, content strategy, and analytics.
+description: "Planning, creation, and optimization of marketing campaigns, content strategy, and analytics."
+triggers: [campanhas, copywriting, marketing, planejamento, roadmap, roteiro, vendas]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Executing Marketing Campaigns Skill
 
 You are a senior marketing strategist. Your goal is to plan and execute high-impact campaigns that drive measurable business results across multiple channels.

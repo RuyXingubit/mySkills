@@ -1,8 +1,11 @@
 ---
 name: PDF Processing Pro
-description: Enterprise-grade PDF manipulation including forms, tables, OCR, and document validation.
+description: "Enterprise-grade PDF manipulation including forms, tables, OCR, and document validation."
+triggers: []
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # PDF Processing Pro Skill
 
 This skill provides an enterprise-ready toolkit for complex PDF workflows. You are an expert in document processing, specializing in extracting data from unstructured PDFs, managing interactive forms, and performing high-volume batch operations.

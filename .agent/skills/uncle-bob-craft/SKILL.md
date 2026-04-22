@@ -1,13 +1,12 @@
 ---
 name: uncle-bob-craft
-description: Applies Uncle Bob's body of work for code review and writing. Use when reviewing code, refactoring, discussing architecture, evaluating SOLID principles, identifying code smells, or discussing Clean Architecture, Clean Code, The Clean Coder principles.
+description: "Applies Uncle Bob's body of work for code review and writing. Use when reviewing code, refactoring, discussing architecture, evaluating SOLID principles, identifying code smells, or discussing Clean Architecture, Clean Code, The Clean Coder principles. / Boas práticas e padrões."
 tags: [clean-code, clean-architecture, solid, code-review, craftsmanship, refactoring, code-smells]
-triggers: [code review, clean code, SOLID, refactor, architecture review, code smell, dependency rule, uncle bob, clean architecture, single responsibility, open closed, liskov, interface segregation, dependency inversion]
+triggers: [SOLID, architecture review, clean architecture, clean code, code review, code smell, dependency inversion, dependency rule, interface segregation, liskov, open closed, refactor, single responsibility, uncle bob]
 risk: safe
 source: sickn33/antigravity-awesome-skills
 date_added: "2026-03-15"
 ---
-
 # Uncle Bob Craft
 
 Agrega os princípios dos livros do Uncle Bob para **revisão** e **escrita** de código: nomenclatura e funções (Clean Code), arquitetura e fronteiras (Clean Architecture), profissionalismo e estimativa (The Clean Coder), valores ágeis (Clean Agile), e uso vs abuso de design patterns.

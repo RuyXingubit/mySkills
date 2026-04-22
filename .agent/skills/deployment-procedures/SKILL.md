@@ -1,9 +1,12 @@
 ---
 name: deployment-procedures
-description: Production deployment principles and decision-making. Safe deployment workflows, rollback strategies, and verification. Teaches thinking, not scripts.
+description: "Production deployment principles and decision-making. Safe deployment workflows, rollback strategies, and verification. Teaches thinking, not scripts."
 allowed-tools: Read, Glob, Grep, Bash
+triggers: []
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Deployment Procedures
 
 > Deployment principles and decision-making for safe production releases.

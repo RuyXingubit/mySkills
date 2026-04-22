@@ -1,9 +1,12 @@
 ---
 name: testing-patterns
-description: Testing patterns and principles. Unit, integration, mocking strategies.
+description: "Testing patterns and principles. Unit, integration, mocking strategies. / Testes e qualidade. Boas práticas e padrões."
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash
+triggers: [cobertura, garantia de qualidade, qa, testes]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Testing Patterns
 
 > Principles for reliable test suites.

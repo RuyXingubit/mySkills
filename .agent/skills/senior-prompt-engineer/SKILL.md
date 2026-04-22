@@ -1,8 +1,11 @@
 ---
 name: Senior Prompt Engineer
-description: Expertise in LLM orchestration, prompt optimization, RAG evaluation, and agentic system design.
+description: "Expertise in LLM orchestration, prompt optimization, RAG evaluation, and agentic system design."
+triggers: [ai, design, engenharia de prompt, experiência do usuário, inteligência artificial, llm, ui, ux]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Senior Prompt Engineer Skill
 
 This skill provides a high-level framework for designing, optimizing, and evaluating LLM-based systems. It focuses on advanced prompting techniques, agentic workflows, and RAG (Retrieval-Augmented Generation) performance.

@@ -1,8 +1,11 @@
 ---
 name: Senior DevOps
 description: Expertise in CI/CD, infrastructure as code, cloud platforms, and deployment automation.
+triggers: []
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Senior DevOps Skill
 
 This skill provides a comprehensive framework for infrastructure automation and reliable delivery pipelines. It focuses on cloud-native practices across AWS, GCP, and Azure.

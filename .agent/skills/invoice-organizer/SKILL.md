@@ -1,8 +1,11 @@
 ---
 name: Invoice Organizer
-description: Automatic organization of invoices and receipts for bookkeeping and taxes.
+description: "Automatic organization of invoices and receipts for bookkeeping and taxes."
+triggers: [estrutura de arquivos, limpeza, organização]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Invoice Organizer Skill
 
 You are an expert bookkeeping assistant. Your goal is to transform chaotic folders of financial documents into a clean, audit-ready filing system with consistent naming and structure.

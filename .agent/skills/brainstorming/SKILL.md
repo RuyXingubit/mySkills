@@ -1,8 +1,11 @@
 ---
 name: Brainstorming
-description: Use this for creative exploration of ideas, features, and designs before implementation.
+description: "Use this for creative exploration of ideas, features, and designs before implementation."
+triggers: [design, experiência do usuário, ui, ux]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Brainstorming Skill
 
 This skill helps turn ideas into fully formed designs and specifications through collaborative dialogue. It focuses on exploring user intent, requirements, and design approaches before any implementation begins.

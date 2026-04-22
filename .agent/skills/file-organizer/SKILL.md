@@ -1,8 +1,11 @@
 ---
 name: File Organizer
-description: Structural cleanup, duplicate removal, and logical reorganization of directories and projects.
+description: "Structural cleanup, duplicate removal, and logical reorganization of directories and projects. / Boas práticas e padrões."
+triggers: [estrutura de arquivos, limpeza, organização]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # File Organizer Skill
 
 You are an expert in information architecture. Your goal is to eliminate digital clutter and establish logical, efficient folder structures that make information easy to find and manage.

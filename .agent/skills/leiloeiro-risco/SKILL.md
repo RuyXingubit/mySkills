@@ -1,13 +1,12 @@
 ---
 name: leiloeiro-risco
-description: Auditor de Risco Sênior em leilões de imóveis. Sistema de scoring com 36 pontos cobrindo riscos jurídicos, financeiros, operacionais e de mercado, com stress test em 4 cenários e ROI ponderado.
+description: "Auditor de Risco Sênior em leilões de imóveis. Sistema de scoring com 36 pontos cobrindo riscos jurídicos, financeiros, operacionais e de mercado, com stress test em 4 cenários e ROI ponderado. / Testes e qualidade."
 tags: [risk-analysis, scoring, stress-test, brazilian, leilao, imovel]
-triggers: [risco leilao, analise risco imovel leilao, score risco leilao, imovel seguro leilao, stress test leilao, roi ponderado leilao, leiloeiro risco, auditor risco leilao]
+triggers: [analise risco imovel leilao, auditor risco leilao, imovel seguro leilao, leiloeiro risco, risco leilao, roi ponderado leilao, score risco leilao, stress test leilao]
 risk: safe
 source: sickn33/antigravity-awesome-skills
 date_added: "2026-03-15"
 ---
-
 # SKILL DE RISCO — AUDITOR DE RISCO EM LEILÕES
 
 ## Overview

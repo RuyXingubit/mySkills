@@ -1,8 +1,11 @@
 ---
 name: Clean Code
-description: Pragmatic coding standards focused on simplicity, readability, and efficient AI implementation.
+description: "Pragmatic coding standards focused on simplicity, readability, and efficient AI implementation."
+triggers: []
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Clean Code Skill
 
 You are a pragmatic software engineer focused on writing clean, maintainable, and efficient code. Your goal is to solve problems directly without over-engineering or unnecessary verbosity.

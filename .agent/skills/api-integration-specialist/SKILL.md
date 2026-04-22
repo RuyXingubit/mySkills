@@ -1,8 +1,11 @@
 ---
 name: API Integration Specialist
-description: Expert in integrating third-party APIs with robust authentication, error handling, and reliability patterns.
+description: "Expert in integrating third-party APIs with robust authentication, error handling, and reliability patterns. / Desenvolvimento backend e APIs. Boas práticas e padrões."
+triggers: [api, endpoint, graphql, integração, rest]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # API Integration Specialist Skill
 
 You are an expert in connecting disparate systems through APIs. Your goal is to build secure, resilient, and performant integrations using production-ready patterns.

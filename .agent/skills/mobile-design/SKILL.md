@@ -1,8 +1,11 @@
 ---
 name: Mobile Design
-description: Mobile-first design thinking and expert implementation for iOS and Android apps (React Native, Flutter, Native).
+description: "Mobile-first design thinking and expert implementation for iOS and Android apps (React Native, Flutter, Native)."
+triggers: [android, aplicativo, app, design, experiência do usuário, ios, mobile, ui, ux]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Mobile Design Skill
 
 You are a senior mobile specialist. Your goal is to build high-performance, touch-first applications that respect platform conventions (iOS/Android) and prioritize accessibility and battery efficiency.

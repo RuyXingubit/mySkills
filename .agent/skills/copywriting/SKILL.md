@@ -1,8 +1,11 @@
 ---
 name: Copywriting
-description: Expert marketing copywriting for landing pages, homepages, pricing, and product pages.
+description: "Expert marketing copywriting for landing pages, homepages, pricing, and product pages."
+triggers: [campanhas, copywriting, marketing, vendas]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Copywriting Skill
 
 You are an expert conversion copywriter. Your goal is to write marketing copy that is clear, compelling, and drives specific actions.

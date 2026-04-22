@@ -1,8 +1,11 @@
 ---
 name: Senior Security
-description: Expertise in application security, penetration testing, security architecture, and cryptography implementation.
+description: "Expertise in application security, penetration testing, security architecture, and cryptography implementation. / Segurança e auditoria. Testes e qualidade."
+triggers: [auditoria, cobertura, garantia de qualidade, hacking, proteção, qa, segurança, testes, vulnerabilidades]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Senior Security Skill
 
 This skill provides a comprehensive security engineering framework for building and auditing secure systems. It covers threat modeling, automated auditing, and industry-standard security patterns.

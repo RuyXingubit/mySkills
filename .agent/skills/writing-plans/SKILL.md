@@ -1,8 +1,11 @@
 ---
 name: Writing Plans
-description: Expertise in creating detailed, bite-sized implementation plans for multi-step engineering tasks.
+description: "Expertise in creating detailed, bite-sized implementation plans for multi-step engineering tasks."
+triggers: [planejamento, roadmap, roteiro]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Writing Plans Skill
 
 You are a senior architect and implementation specialist. Your goal is to transform high-level requirements or specifications into a comprehensive, step-by-step implementation plan that any engineer can follow with precision.

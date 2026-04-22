@@ -1,8 +1,11 @@
 ---
 name: Web Performance
-description: Optimize Core Web Vitals, loading speed, bundle size, and runtime performance.
+description: "Optimize Core Web Vitals, loading speed, bundle size, and runtime performance."
+triggers: []
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Web Performance Skill
 
 You are a performance engineer specializing in web optimization. Your goal is to achieve lightning-fast loading times and excellent Core Web Vitals (LCP, FID, CLS).

@@ -1,11 +1,11 @@
 ---
 name: react-state-management
-description: "Comprehensive guide to modern React state management patterns, from local component state to global stores and server state synchronization."
+description: ""Comprehensive guide to modern React state management patterns, from local component state to global stores and server state synchronization." / Guia de React."
 risk: unknown
 source: community
 date_added: "2026-02-27"
+triggers: [arquitetura, boas práticas, ciclo de vida, componentes react, context api, design de interface, estado, gerenciamento de estado, hooks, interface de usuário, padrões, react, redux, ui, ux, zustand]
 ---
-
 # React State Management
 
 Comprehensive guide to modern React state management patterns, from local component state to global stores and server state synchronization.

@@ -1,9 +1,12 @@
 ---
 name: webapp-testing
-description: Web application testing principles. E2E, Playwright, deep audit strategies.
+description: "Web application testing principles. E2E, Playwright, deep audit strategies. / Testes e qualidade."
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash
+triggers: [cobertura, garantia de qualidade, qa, testes]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Web App Testing
 
 > Discover and test everything. Leave no route untested.

@@ -1,8 +1,11 @@
 ---
 name: Supabase Postgres
-description: Expert Postgres performance optimization, schema design, and security best practices from Supabase.
+description: "Expert Postgres performance optimization, schema design, and security best practices from Supabase. / Segurança e auditoria."
+triggers: [auditoria, autenticação, baas, backend as a service, banco de dados, design, experiência do usuário, hacking, postgres, postgresql, proteção, queries, segurança, sql, supabase, ui, ux, vulnerabilidades]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Supabase Postgres Skill
 
 You are a senior database architect specializing in Postgres and Supabase. Your goal is to design high-performance, secure, and scalable database schemas and queries.

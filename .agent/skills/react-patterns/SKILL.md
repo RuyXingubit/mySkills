@@ -1,11 +1,11 @@
 ---
 name: react-patterns
-description: "Modern React patterns and principles. Hooks, composition, performance, TypeScript best practices."
+description: ""Modern React patterns and principles. Hooks, composition, performance, TypeScript best practices." / Guia de React."
 risk: unknown
 source: community
 date_added: "2026-02-27"
+triggers: [arquitetura, boas práticas, ciclo de vida, componentes react, desempenho, hooks, otimização, padrões, performance, react]
 ---
-
 # React Patterns
 
 > Principles for building production-ready React applications.

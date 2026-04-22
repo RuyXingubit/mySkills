@@ -1,8 +1,11 @@
 ---
 name: Senior Frontend
-description: Expertise for building modern web applications with React, Next.js, TypeScript, and Tailwind CSS.
+description: "Expertise for building modern web applications with React, Next.js, TypeScript, and Tailwind CSS. / Guia de React. Melhores práticas de Next.js. Padronização Tailwind CSS."
+triggers: [ciclo de vida, client-side, componentes react, css utilitário, desenvolvimento web, design de interface, estilização, frontend, hooks, interface, interface de usuário, react, tailwind, ui, ux]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Senior Frontend Skill
 
 This skill provides a comprehensive toolkit for building modern, performant web applications. It includes best practices, pattern references, and automated scripts for component generation and performance analysis.

@@ -1,9 +1,12 @@
 ---
 name: database-design
-description: Database design principles and decision-making. Schema design, indexing strategy, ORM selection, serverless databases.
+description: "Database design principles and decision-making. Schema design, indexing strategy, ORM selection, serverless databases. / Desenvolvimento backend e APIs. Banco de dados e modelagem."
 allowed-tools: Read, Write, Edit, Glob, Grep
+triggers: [banco de dados, design, esquema, experiência do usuário, migrations, modelagem, ui, ux]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Database Design
 
 > **Learn to THINK, not copy SQL patterns.**

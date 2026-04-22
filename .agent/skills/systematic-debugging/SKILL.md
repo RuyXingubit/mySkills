@@ -1,8 +1,11 @@
 ---
 name: Systematic Debugging
-description: Structured process for addressing bugs, test failures, or unexpected behaviors.
+description: "Structured process for addressing bugs, test failures, or unexpected behaviors. / Testes e qualidade."
+triggers: [debugging, depuração, logs, resolver bugs]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Systematic Debugging Skill
 
 This skill provides a rigorous methodology for identifying, isolating, and fixing software defects. It moves away from "guess-and-check" towards a scientific approach of hypothesis testing and root cause analysis.

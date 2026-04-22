@@ -1,13 +1,12 @@
 ---
 name: doc-coauthoring
-description: Structured workflow for collaborative document creation. Use when writing documentation, proposals, technical specs, decision docs, PRDs, design docs, RFCs, or any substantial writing task. Guides through Context Gathering, Refinement and Structure, and Reader Testing stages.
+description: "Structured workflow for collaborative document creation. Use when writing documentation, proposals, technical specs, decision docs, PRDs, design docs, RFCs, or any substantial writing task. Guides through Context Gathering, Refinement and Structure, and Reader Testing stages. / Testes e qualidade."
 tags: [documentation, writing, co-authoring, prd, rfc, spec, proposal, design-doc]
-triggers: [write a doc, draft a proposal, create a spec, write up, PRD, design doc, decision doc, RFC, documentation, technical spec, co-author]
+triggers: [PRD, RFC, co-author, cobertura, create a spec, decision doc, design, design doc, docs, documentation, documentação, draft a proposal, especificação, experiência do usuário, garantia de qualidade, qa, readme, technical spec, testes, ui, ux, write a doc, write up]
 risk: safe
 source: sickn33/antigravity-awesome-skills
 date_added: "2026-03-15"
 ---
-
 # Doc Co-Authoring Workflow
 
 Workflow estruturado para co-criação colaborativa de documentos. Atua como guia ativo, conduzindo o usuário por 3 etapas: **Coleta de Contexto**, **Refinamento & Estrutura** e **Teste com Leitor**.

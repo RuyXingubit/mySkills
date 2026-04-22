@@ -2,12 +2,11 @@
 name: analyze-project
 description: Forensic root cause analyzer for Antigravity sessions. Classifies scope deltas, rework patterns, root causes, hotspots, and auto-improves prompts/health.
 tags: [analysis, diagnostics, meta, root-cause, project-health, session-review]
-triggers: [analyze-project, analyze project, session analysis, root cause, project health, diagnose sessions]
+triggers: [ai, analyze project, analyze-project, diagnose sessions, engenharia de prompt, inteligência artificial, llm, project health, root cause, session analysis]
 risk: safe
 source: sickn33/antigravity-awesome-skills
 date_added: "2026-03-15"
 ---
-
 # /analyze-project — Root Cause Analyst Workflow
 
 Analise sessões do Antigravity na pasta `brain/` e produza um relatório diagnóstico que explica não apenas **o que aconteceu**, mas **por que aconteceu**, **quem/o que causou** e **o que deve mudar na próxima vez**.

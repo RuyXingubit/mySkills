@@ -1,8 +1,11 @@
 ---
 name: Theme Factory
-description: Toolkit for styling artifacts (slides, docs, HTML) with professional color and font themes.
+description: "Toolkit for styling artifacts (slides, docs, HTML) with professional color and font themes."
+triggers: []
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Theme Factory Skill
 
 This skill provides a curated collection of 10 professional themes, each with carefully selected color palettes and font pairings. It ensures consistent, high-end styling for any artifact, from presentations to landing pages.

@@ -4,8 +4,8 @@ description: "Master ES6+ features including async/await, destructuring, spread 
 risk: unknown
 source: community
 date_added: "2026-02-27"
+triggers: []
 ---
-
 # Modern JavaScript Patterns
 
 Comprehensive guide for mastering modern JavaScript (ES6+) features, functional programming patterns, and best practices for writing clean, maintainable, and performant code.

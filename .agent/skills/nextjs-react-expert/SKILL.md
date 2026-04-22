@@ -4,8 +4,8 @@ description: "React and Next.js performance optimization from Vercel Engineering
 risk: unknown
 source: community
 date_added: "2026-02-27"
+triggers: [ciclo de vida, componentes react, desempenho, design de interface, hooks, interface de usuário, otimização, performance, react, ui, ux]
 ---
-
 # React Best Practices (Vercel)
 
 Comprehensive performance optimization guide for React and Next.js applications, maintained by Vercel. Contains rules across 8 categories, prioritized by impact.

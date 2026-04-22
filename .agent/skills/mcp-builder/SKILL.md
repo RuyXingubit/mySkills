@@ -1,9 +1,12 @@
 ---
 name: mcp-builder
-description: MCP (Model Context Protocol) server building principles. Tool design, resource patterns, best practices.
+description: "MCP (Model Context Protocol) server building principles. Tool design, resource patterns, best practices. / Desenvolvimento backend e APIs. Boas práticas e padrões."
 allowed-tools: Read, Write, Edit, Glob, Grep
+triggers: [design, experiência do usuário, ui, ux]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # MCP Builder
 
 > Principles for building MCP servers.

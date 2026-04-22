@@ -1,8 +1,11 @@
 ---
 name: Test-Driven Development (TDD)
-description: Workflow for implementing features or bug fixes by writing tests before implementation code.
+description: "Workflow for implementing features or bug fixes by writing tests before implementation code. / Testes e qualidade."
+triggers: [qualidade, red green refactor, tdd, testes unitários]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Test-Driven Development Skill
 
 This skill implements the Red-Green-Refactor cycle to ensure code is testable, robust, and fulfills requirements from the start. It focuses on writing failing tests first to drive the design of the solution.

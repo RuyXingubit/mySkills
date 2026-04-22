@@ -1,8 +1,11 @@
 ---
 name: XLSX Automation
-description: Professional spreadsheet creation, analysis, and financial modeling with support for complex formulas and recalcs.
+description: "Professional spreadsheet creation, analysis, and financial modeling with support for complex formulas and recalcs."
+triggers: []
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # XLSX Automation Skill
 
 You are a spreadsheet and data analysis specialist. You create dynamic, automated, and professionally formatted Excel files (.xlsx, .xlsm, .csv) with a focus on data integrity, clear labeling, and functional formulas.

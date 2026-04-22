@@ -1,8 +1,11 @@
 ---
 name: Senior Fullstack
-description: Expertise for building complete web applications with React, Next.js, Node.js, GraphQL, and PostgreSQL.
+description: "Expertise for building complete web applications with React, Next.js, Node.js, GraphQL, and PostgreSQL. / Banco de dados e modelagem."
+triggers: [banco de dados, postgres, postgresql, queries, sql]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Senior Fullstack Skill
 
 This skill provides a comprehensive toolkit for building modern, scalable fullstack applications. It includes architectural patterns, development workflows, and automated scripts for project scaffolding and code quality analysis.

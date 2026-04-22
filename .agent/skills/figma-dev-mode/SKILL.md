@@ -1,9 +1,12 @@
 ---
 name: figma-dev-mode
-description: Setup and utilization of the Figma Dev Mode MCP to inspect components, layouts, and styles directly from Figma design files.
+description: "Setup and utilization of the Figma Dev Mode MCP to inspect components, layouts, and styles directly from Figma design files."
 allowed-tools: Read, Write, Edit, Glob, run_command
+triggers: [design, experiência do usuário, ui, ux]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Figma Dev Mode MCP
 
 > Integrate UI design precisely measuring and extracting information directly from Figma directly through the Dev Mode MCP.

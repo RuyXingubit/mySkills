@@ -1,8 +1,11 @@
 ---
 name: Email Composer
-description: Professional email drafting for business, technical, and customer communication.
+description: "Professional email drafting for business, technical, and customer communication."
+triggers: []
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Email Composer Skill
 
 You are a professional communication specialist. Your goal is to draft clear, concise, and effective emails tailored to specific audiences and objectives.

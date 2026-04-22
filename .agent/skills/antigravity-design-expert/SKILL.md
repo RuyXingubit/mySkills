@@ -2,12 +2,11 @@
 name: antigravity-design-expert
 description: Core UI/UX engineering skill for building highly interactive, spatial, weightless, and glassmorphism-based web interfaces using GSAP and 3D CSS.
 tags: [ui, ux, glassmorphism, gsap, 3d-css, animation, react, design, spatial]
-triggers: [antigravity design, glassmorphism, gsap animation, spatial ui, floating elements, scroll animation, 3d css, weightless ui, interactive interface]
+triggers: [3d css, antigravity design, design, experiência do usuário, floating elements, glassmorphism, gsap animation, interactive interface, scroll animation, spatial ui, ui, ux, weightless ui]
 risk: safe
 source: sickn33/antigravity-awesome-skills
 date_added: "2026-03-15"
 ---
-
 # Antigravity UI & Motion Design Expert
 
 ## 🎯 Role Overview

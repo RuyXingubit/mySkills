@@ -1,9 +1,12 @@
 ---
 name: tdd-workflow
-description: Test-Driven Development workflow principles. RED-GREEN-REFACTOR cycle.
+description: "Test-Driven Development workflow principles. RED-GREEN-REFACTOR cycle. / Testes e qualidade."
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash
+triggers: [qualidade, red green refactor, tdd, testes unitários]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # TDD Workflow
 
 > Write tests first, code second.

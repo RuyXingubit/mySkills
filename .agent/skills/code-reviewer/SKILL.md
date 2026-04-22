@@ -1,8 +1,11 @@
 ---
 name: Code Reviewer
-description: Expert in code quality, standards, and identification of anti-patterns.
+description: "Expert in code quality, standards, and identification of anti-patterns. / Boas práticas e padrões."
+triggers: []
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Code Reviewer Skill
 
 This skill provides expert-level code review capabilities, focusing on maintainability, security, and adherence to coding standards. It includes checklists and automated tools to analyze pull requests and code quality.

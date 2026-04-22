@@ -1,9 +1,12 @@
 ---
 name: code-review-checklist
-description: Code review guidelines covering code quality, security, and best practices.
+description: "Code review guidelines covering code quality, security, and best practices. / Segurança e auditoria."
 allowed-tools: Read, Glob, Grep
+triggers: [auditoria, hacking, proteção, segurança, vulnerabilidades]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Code Review Checklist
 
 ## Quick Review Checklist

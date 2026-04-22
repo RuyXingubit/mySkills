@@ -1,9 +1,12 @@
 ---
 name: api-patterns
-description: API design principles and decision-making. REST vs GraphQL vs tRPC selection, response formats, versioning, pagination.
+description: "API design principles and decision-making. REST vs GraphQL vs tRPC selection, response formats, versioning, pagination. / Desenvolvimento backend e APIs."
 allowed-tools: Read, Write, Edit, Glob, Grep
+triggers: [api, design, endpoint, experiência do usuário, graphql, integração, rest, ui, ux]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # API Patterns
 
 > API design principles and decision-making for 2025.

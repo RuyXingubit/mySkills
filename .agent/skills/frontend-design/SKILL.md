@@ -1,9 +1,12 @@
 ---
 name: frontend-design
-description: Design thinking and decision-making for web UI. Use when designing components, layouts, color schemes, typography, or creating aesthetic interfaces. Teaches principles, not fixed values.
+description: ""Design thinking and decision-making for web UI. Use when designing components, layouts, color schemes, typography, or creating aesthetic interfaces. Teaches principles, not fixed values.""
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash
+triggers: [client-side, desenvolvimento web, design, design de interface, espaçamento, experiência do usuário, frontend, interface, interface de usuário, sistema de design, tipografia, ui, ux]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Frontend Design System
 
 > **Philosophy:** Every pixel has purpose. Restraint is luxury. User psychology drives decisions.

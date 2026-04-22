@@ -1,9 +1,12 @@
 ---
 name: i18n-localization
-description: Internationalization and localization patterns. Detecting hardcoded strings, managing translations, locale files, RTL support.
+description: "Internationalization and localization patterns. Detecting hardcoded strings, managing translations, locale files, RTL support. / Boas práticas e padrões."
 allowed-tools: Read, Glob, Grep
+triggers: []
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # i18n & Localization
 
 > Internationalization (i18n) and Localization (L10n) best practices.

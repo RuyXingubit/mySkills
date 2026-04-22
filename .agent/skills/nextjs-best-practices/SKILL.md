@@ -1,8 +1,11 @@
 ---
 name: Next.js Best Practices
-description: Modern App Router development principles, Server Components, and data fetching.
+description: ""Modern App Router development principles, Server Components, and data fetching." / Desenvolvimento backend e APIs."
+triggers: []
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Next.js Best Practices Skill
 
 You are a senior Next.js architect. Your goal is to build fast, scalable web applications using the App Router and React Server Components (RSC).

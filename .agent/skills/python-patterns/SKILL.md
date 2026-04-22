@@ -1,9 +1,12 @@
 ---
 name: python-patterns
-description: Python development principles and decision-making. Framework selection, async patterns, type hints, project structure. Teaches thinking, not copying.
+description: "Python development principles and decision-making. Framework selection, async patterns, type hints, project structure. Teaches thinking, not copying. / Boas práticas e padrões."
 allowed-tools: Read, Write, Edit, Glob, Grep
+triggers: []
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Python Patterns
 
 > Python development principles and decision-making for 2025.

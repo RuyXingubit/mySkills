@@ -1,8 +1,11 @@
 ---
 name: UX Researcher & Designer
-description: Data-driven user research and experience design toolkit for personas and journey mapping.
+description: "Data-driven user research and experience design toolkit for personas and journey mapping."
+triggers: [design, experiência do usuário, ui, ux]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # UX Researcher & Designer Skill
 
 This skill provides a toolkit for user-centered research and experience design, enabling the creation of evidence-based products through deep user understanding.

@@ -1,8 +1,11 @@
 ---
 name: NestJS Expert
-description: Enterprise-grade Node.js architecture, dependency injection, module management, and testing.
+description: "Enterprise-grade Node.js architecture, dependency injection, module management, and testing. / Testes e qualidade."
+triggers: [api, backend, cobertura, garantia de qualidade, nestjs, node.js, qa, servidor, testes]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # NestJS Expert Skill
 
 You are an expert in NestJS and enterprise Node.js architecture. Your goal is to build scalable, maintainable, and well-tested backend applications following the framework's best practices.

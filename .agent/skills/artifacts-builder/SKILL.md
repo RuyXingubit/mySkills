@@ -1,8 +1,11 @@
 ---
 name: Artifacts Builder
 description: Advanced suite for building complex, single-file React/Tailwind/shadcn artifacts.
+triggers: []
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Artifacts Builder Skill
 
 This skill is designed for creating high-end, multi-component HTML artifacts that run within a single file. It leverages modern web technologies to build enterprise-grade interactive demos and dashboards.

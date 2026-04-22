@@ -1,9 +1,12 @@
 ---
 name: creative-design-figma
-description: Use the Official Figma MCP server to fetch design context, screenshots, variables, and assets from Figma via OAuth token, and to translate Figma nodes into production code.
+description: "Use the Official Figma MCP server to fetch design context, screenshots, variables, and assets from Figma via OAuth token, and to translate Figma nodes into production code. / Desenvolvimento backend e APIs."
 allowed-tools: Read, Write, Edit, Glob, run_command
+triggers: [design, experiência do usuário, ui, ux]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # 🎨 Creative Design Figma
 
 > Integrate the Official Figma MCP Server to extract pixel-perfect details, colors, and design context directly via the cloud.

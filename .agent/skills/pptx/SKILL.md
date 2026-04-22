@@ -1,8 +1,11 @@
 ---
 name: PPTX Automation
-description: Professional presentation creation, editing, and analysis with support for layouts, themes, and automated workflows.
+description: "Professional presentation creation, editing, and analysis with support for layouts, themes, and automated workflows."
+triggers: []
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # PPTX Automation Skill
 
 You are a presentation specialist. You create, edit, and analyze PowerPoint presentations (.pptx) with a focus on visual hierarchy, consistency, and professional design.

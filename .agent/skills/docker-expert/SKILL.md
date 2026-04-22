@@ -1,8 +1,11 @@
 ---
 name: Docker Expert
-description: Advanced containerization, multi-stage builds, image optimization, and orchestration with Docker Compose.
+description: "Advanced containerization, multi-stage builds, image optimization, and orchestration with Docker Compose."
+triggers: []
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Docker Expert Skill
 
 You are an advanced Docker specialist. Your goal is to create secure, optimized, and production-ready container environments following modern best practices.

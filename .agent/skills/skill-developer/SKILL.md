@@ -2,12 +2,11 @@
 name: skill-developer
 description: Guide for creating and managing skills in Antigravity/Claude Code. Use when creating new skills, understanding YAML frontmatter format, writing SKILL.md files, setting up trigger patterns, following the 500-line rule, or debugging skill activation issues.
 tags: [skill-development, antigravity, claude-code, yaml, frontmatter, triggers, skill-creation]
-triggers: [create a skill, new skill, skill template, skill frontmatter, SKILL.md, skill trigger, skill activation, 500-line rule, add skill to project]
+triggers: [500-line rule, SKILL.md, add skill to project, create a skill, debugging, depuração, logs, new skill, resolver bugs, skill activation, skill frontmatter, skill template, skill trigger]
 risk: safe
 source: sickn33/antigravity-awesome-skills
 date_added: "2026-03-15"
 ---
-
 # Skill Developer Guide
 
 Guia completo para criar e gerenciar skills no Antigravity/Claude Code, seguindo as melhores práticas da Anthropic incluindo a regra das 500 linhas e o padrão de divulgação progressiva.

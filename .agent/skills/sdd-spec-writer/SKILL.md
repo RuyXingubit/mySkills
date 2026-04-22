@@ -1,8 +1,11 @@
 ---
 name: "SDD Spec Writer"
-description: "Specification writing methodology for Spec-Driven Development (SDD)"
+description: ""Specification writing methodology for Spec-Driven Development (SDD)""
+triggers: []
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # SDD Spec Writer Skill
 
 This skill provides the structure and methodology for Spec-Driven Development (SDD) — creating executable specifications that serve as unambiguous contracts for both human developers and AI agents.

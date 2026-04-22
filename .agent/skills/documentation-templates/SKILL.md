@@ -1,9 +1,12 @@
 ---
 name: documentation-templates
-description: Documentation templates and structure guidelines. README, API docs, code comments, and AI-friendly documentation.
+description: "Documentation templates and structure guidelines. README, API docs, code comments, and AI-friendly documentation. / Desenvolvimento backend e APIs."
 allowed-tools: Read, Glob, Grep
+triggers: [api, docs, documentação, endpoint, especificação, graphql, integração, readme, rest]
+risk: safe
+source: v4-migration
+date_added: "2026-04-22"
 ---
-
 # Documentation Templates
 
 > Templates and structure guidelines for common documentation types.
