@@ -19,6 +19,14 @@
   ],
   "author": "Ruy",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RuyXingubit/mySkills.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RuyXingubit/mySkills/issues"
+  },
+  "homepage": "https://github.com/RuyXingubit/mySkills#readme",
   "dependencies": {
     "chalk": "^5.3.0",
     "commander": "^12.0.0"

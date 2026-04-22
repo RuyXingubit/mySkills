@@ -1,0 +1,9 @@
+.git/
+.agent/scripts/localize_batch_01.py
+.agent/scripts/localize_master.py
+test-yaml.js
+tmp_skill/
+.DS_Store
+.env
+npm-debug.log*
+node_modules/
