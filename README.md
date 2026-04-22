@@ -12,6 +12,7 @@ npx @ruyfranca/myskills init && npx @ruyfranca/myskills install-global
 
 - `init` → instala a pasta `.agent/` (skills, agents, workflows) no projeto atual
 - `install-global` → instala os workflows em `~/.gemini/antigravity/global_workflows/` para o menu `/` do Antigravity
+- **🌎 Tropicalização**: Todas as skills agora suportam gatilhos em **Português**, permitindo comandos naturais como *"otimizar"* ou *"corrigir bug"*.
 
 > **Após rodar, feche e reabra o Antigravity.** Os comandos `/brainstorm`, `/debug`, `/plan` e todos os outros estarão disponíveis.
 
@@ -127,12 +128,12 @@ Integração com o Figma Oficial na Nuvem:
 - **Precisão**: Extração limpa de variáveis, componentes e assets (SVGs e imagens).
 
 ---
-## 📚 Mais de 70 Skills Especializadas!
+## 📚 Mais de 90 Skills Especializadas!
 A biblioteca foi expandida massivamente com recursos do Antigravity Kit. Algumas novas categorias incluem:
 
 - **Ecosystems**: [Rust Pro](file:///Users/ruy/Code/mySkills/.agent/skills/rust-pro/SKILL.md), [Python Patterns](file:///Users/ruy/Code/mySkills/.agent/skills/python-patterns/SKILL.md), [MCP Builder](file:///Users/ruy/Code/mySkills/.agent/skills/mcp-builder/SKILL.md).
 - **Architecture**: [Database Design](file:///Users/ruy/Code/mySkills/.agent/skills/database-design/SKILL.md), [Deployment Procedures](file:///Users/ruy/Code/mySkills/.agent/skills/deployment-procedures/SKILL.md), [API Patterns](file:///Users/ruy/Code/mySkills/.agent/skills/api-patterns/SKILL.md).
-- **Frontend & Web**: [Tailwind Patterns](file:///Users/ruy/Code/mySkills/.agent/skills/tailwind-patterns/SKILL.md), [Next.js React Expert](file:///Users/ruy/Code/mySkills/.agent/skills/nextjs-react-expert/SKILL.md), [Web Design Guidelines](file:///Users/ruy/Code/mySkills/.agent/skills/web-design-guidelines/SKILL.md).
+- **Frontend & Web**: [React Best Practices](file:///Users/ruy/Documents/mySkills-1/.agent/skills/react-best-practices/SKILL.md), [Tailwind Patterns](file:///Users/ruy/Code/mySkills/.agent/skills/tailwind-patterns/SKILL.md), [Next.js React Expert](file:///Users/ruy/Code/mySkills/.agent/skills/nextjs-react-expert/SKILL.md), [Web Design Guidelines](file:///Users/ruy/Code/mySkills/.agent/skills/web-design-guidelines/SKILL.md).
 - **Testing & Security**: [Vulnerability Scanner](file:///Users/ruy/Code/mySkills/.agent/skills/vulnerability-scanner/SKILL.md), [Webapp Testing](file:///Users/ruy/Code/mySkills/.agent/skills/webapp-testing/SKILL.md), [Red Team Tactics](file:///Users/ruy/Code/mySkills/.agent/skills/red-team-tactics/SKILL.md).
 - **DevOps & SysAdmin**: [Server Management](file:///Users/ruy/Code/mySkills/.agent/skills/server-management/SKILL.md), [Bash Linux](file:///Users/ruy/Code/mySkills/.agent/skills/bash-linux/SKILL.md), [Powershell Windows](file:///Users/ruy/Code/mySkills/.agent/skills/powershell-windows/SKILL.md).
 
