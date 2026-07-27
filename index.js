@@ -331,26 +331,51 @@ program
 
 program
   .command('install-global')
-  .description('Instala os workflows globalmente para aparecerem no / em qualquer projeto do Antigravity')
+  .description('Instala as skills, agents e workflows globalmente no Antigravity')
   .action(async () => {
     const homeDir = process.env.HOME || process.env.USERPROFILE || '';
+    
+    // Instalar como Plugin oficial
+    const pluginDir = path.join(homeDir, '.gemini', 'config', 'plugins', 'myskills');
     const globalWorkflowsDir = path.join(homeDir, '.gemini', 'antigravity', 'global_workflows');
-    const workflowsSrc = path.join(__dirname, '.agent', 'workflows');
-
-    console.log(chalk.cyan('\n🌐 Instalando workflows globalmente...\n'));
+    
+    console.log(chalk.cyan('\n🌐 Instalando myskills globalmente como um Plugin do Antigravity...\n'));
 
     try {
-      await fs.mkdir(globalWorkflowsDir, { recursive: true });
-      const files = await fs.readdir(workflowsSrc);
-      let copied = 0;
-      for (const file of files) {
-        if (file.endsWith('.md')) {
-          await copyRecursively(path.join(workflowsSrc, file), path.join(globalWorkflowsDir, file));
-          copied++;
+      await fs.mkdir(pluginDir, { recursive: true });
+      
+      // Copiar plugin.json
+      if (existsSync(path.join(__dirname, 'plugin.json'))) {
+        await fs.copyFile(path.join(__dirname, 'plugin.json'), path.join(pluginDir, 'plugin.json'));
+      }
+      
+      // Copiar Skills e Agents para o Plugin
+      const dirs = ['skills', 'agents'];
+      for (const dir of dirs) {
+        const src = path.join(__dirname, '.agent', dir);
+        if (existsSync(src)) {
+          await copyRecursively(src, path.join(pluginDir, dir));
+          console.log(chalk.green(`  ✅ ${dir} copiados para o Plugin.`));
         }
       }
-      console.log(chalk.green(`  ✅ ${copied} workflows instalados em ${globalWorkflowsDir}`));
-      console.log(chalk.cyan.bold('\n✨ Feito! Reinicie o Antigravity e use / para ver os workflows.\n'));
+
+      // Copiar Workflows para global_workflows e workflows do plugin (caso suportado)
+      const workflowsSrc = path.join(__dirname, '.agent', 'workflows');
+      if (existsSync(workflowsSrc)) {
+        await fs.mkdir(globalWorkflowsDir, { recursive: true });
+        await copyRecursively(workflowsSrc, path.join(pluginDir, 'workflows'));
+        const files = await fs.readdir(workflowsSrc);
+        let copied = 0;
+        for (const file of files) {
+          if (file.endsWith('.md')) {
+            await copyRecursively(path.join(workflowsSrc, file), path.join(globalWorkflowsDir, file));
+            copied++;
+          }
+        }
+        console.log(chalk.green(`  ✅ ${copied} workflows instalados globalmente.`));
+      }
+
+      console.log(chalk.cyan.bold('\n✨ Feito! Reinicie o Antigravity para as skills e workflows estarem disponíveis em qualquer projeto.\n'));
     } catch (err) {
       console.error(chalk.red(`  ❌ Erro: ${err.message}`));
     }
