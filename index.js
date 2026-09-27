@@ -25,7 +25,7 @@ const AGENTS_DIR = path.join(__dirname, '.agent', 'agents');
 program
   .name('myskills')
   .description('CLI para gerenciar e instalar skills e agents do Antigravity')
-  .version('1.0.39');
+  .version('1.0.40');
 
 // Helper para copiar pastas recursivamente
 async function copyRecursively(src, dest) {

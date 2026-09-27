@@ -16,6 +16,17 @@ npx @ruyfranca/myskills init && npx @ruyfranca/myskills install-global
 
 > **Após rodar, feche e reabra o Antigravity.** Os comandos `/brainstorm`, `/debug`, `/plan` e todos os outros estarão disponíveis.
 
+### 📋 Referência Rápida de Comandos
+
+| Finalidade | Comando | Descrição |
+| :--- | :--- | :--- |
+| **Instalar Local** | `npx @ruyfranca/myskills init` | Instala `.agent/` completo no projeto |
+| **Instalar Global** | `npx @ruyfranca/myskills install-global` | Registra plugin e workflows globais no Antigravity |
+| **Adicionar Item** | `npx @ruyfranca/myskills add [nome]` | Adiciona skill específica (ou `--agent` para agent) |
+| **Atualizar** | `npx @ruyfranca/myskills update` | Atualiza o kit no projeto para a versão mais recente |
+| **Remover Item** | `npx @ruyfranca/myskills remove [nome]` | Remove uma skill pontual (ou `--agent`) do projeto |
+| **Desinstalar** | `npx @ruyfranca/myskills uninstall` | Desinstalação cirúrgica (projeto, global ou tudo) |
+
 ---
 
 ## 🚀 Skills Disponíveis
@@ -334,54 +345,96 @@ npx @ruyfranca/myskills init && npx @ruyfranca/myskills install-global
 
 Após executar, **feche e reabra o Antigravity**. Os slash commands (`/brainstorm`, `/debug`, `/plan`, etc.) estarão disponíveis em qualquer projeto.
 
-### Todos os Comandos
+### 📥 1. Instalação e Inicialização
 
 ```bash
-# Listar skills disponíveis
+# Listar skills disponíveis no kit
 npx @ruyfranca/myskills list
 
-# Listar agents disponíveis
+# Listar agents disponíveis no kit
 npx @ruyfranca/myskills list-agents
 
-# Inicializar kit completo no projeto atual (.agent/ com skills, agents, workflows)
+# Inicializar o kit completo no projeto atual (.agent/ com skills, agents, workflows, scripts e regras)
 npx @ruyfranca/myskills init
 
-# 🌐 Ativar o menu / do Antigravity com todos os workflows (roda uma vez por máquina)
+# 🌐 Ativar o menu / do Antigravity globalmente na sua máquina (roda uma única vez)
 npx @ruyfranca/myskills install-global
 
-# Instalar uma skill individual
+# Instalar uma skill individualmente
 npx @ruyfranca/myskills add <nome-da-skill>
 
-# Instalar um agent individual
+# Instalar um agent individualmente
 npx @ruyfranca/myskills add <nome-do-agent> --agent
 
-# Instalar todas as 40+ skills
+# Instalar todas as skills disponíveis
 npx @ruyfranca/myskills add --all
+```
 
-# Atualizar o kit no projeto atual (skills + agents + workflows + global_workflows)
+---
+
+### 🔄 2. Atualização
+
+```bash
+# Atualizar todo o kit no projeto atual para a versão mais recente
 npx @ruyfranca/myskills update
 
-# Atualizar apenas um componente específico:
+# Ou atualizar apenas componentes específicos:
 npx @ruyfranca/myskills update --skills
 npx @ruyfranca/myskills update --agents
 npx @ruyfranca/myskills update --workflows
+npx @ruyfranca/myskills update --rules
+```
 
-# Remover uma skill individual do projeto atual
+---
+
+### 🗑️ 3. Desinstalação e Remoção Cirúrgica (Zero Data Loss)
+
+> **🛡️ Blindagem de Segurança**: O `myskills` nunca executa exclusões cegas. Ele consulta o seu catálogo canônico e remove **apenas** o que pertence à sua própria biblioteca. Se você criou skills personalizadas em `.agent/skills/` ou workflows próprios em `~/.gemini/antigravity/global_workflows/`, eles são **100% preservados**.
+
+#### A) Remover uma Skill ou Agent Específico (`remove`)
+Remove pontualmente um item do projeto atual e limpa pastas vazias:
+```bash
+# Remover uma skill:
 npx @ruyfranca/myskills remove <nome-da-skill>
 
-# Remover um agent individual do projeto atual
+# Remover um agent:
 npx @ruyfranca/myskills remove <nome-do-agent> --agent
 
-# Desinstalação cirúrgica do projeto atual (preserva 100% dos seus arquivos próprios)
+# Modo interativo (se omitir o nome, exibe a lista dos itens instalados):
+npx @ruyfranca/myskills remove
+```
+
+#### B) Desinstalação Cirúrgica do Projeto (`uninstall --project`)
+Remove do projeto atual apenas os arquivos e pastas oficiais do `myskills` (`.agent/`, `AGENTS.md`, `GEMINI.md`). Arquivos criados por você permanecem intactos:
+```bash
 npx @ruyfranca/myskills uninstall --project
 
-# Desinstalação cirúrgica global (~/.gemini)
-npx @ruyfranca/myskills uninstall --global
-# Ou via comando dedicado:
-npx @ruyfranca/myskills uninstall-global
+# Modo não interativo (pula o pedido de confirmação):
+npx @ruyfranca/myskills uninstall --project -y
+```
 
-# Desinstalação completa (projeto atual + global)
+#### C) Desinstalação Cirúrgica Global (`uninstall --global`)
+Remove o diretório do plugin (`~/.gemini/config/plugins/myskills`) e remove de `~/.gemini/antigravity/global_workflows` estritamente os workflows do catálogo oficial do `myskills`. Workflows de outros plugins ou workflows pessoais não são tocados:
+```bash
+npx @ruyfranca/myskills uninstall --global
+
+# Ou via comando dedicado:
+npx @ruyfranca/myskills uninstall-global -y
+```
+
+#### D) Desinstalação Total (`uninstall --all`)
+Limpa os componentes do projeto atual e do escopo global em um único comando:
+```bash
 npx @ruyfranca/myskills uninstall --all
+```
+
+#### E) Modo Interativo com Pré-visualização de Segurança
+Se você rodar `uninstall` sem argumentos, a CLI faz uma varredura preventiva e exibe:
+1. Lista exata dos itens do `myskills` que serão excluídos;
+2. Lista dos arquivos e skills customizadas que foram detectadas e serão **preservadas**;
+3. Pede sua confirmação explícita antes de tocar em qualquer arquivo no disco.
+```bash
+npx @ruyfranca/myskills uninstall
 ```
 
 ### 🚨 Resolução de Problemas (Troubleshooting)
