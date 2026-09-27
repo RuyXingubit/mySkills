@@ -7,6 +7,14 @@ import { existsSync, statSync } from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import * as readline from 'readline/promises';
+import { getCatalog } from './lib/catalog.js';
+import {
+  scanProject,
+  uninstallProject,
+  removeLocalItem,
+  scanGlobal,
+  uninstallGlobal
+} from './lib/cleaner.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const program = new Command();
@@ -17,7 +25,7 @@ const AGENTS_DIR = path.join(__dirname, '.agent', 'agents');
 program
   .name('myskills')
   .description('CLI para gerenciar e instalar skills e agents do Antigravity')
-  .version('1.0.34');
+  .version('1.0.39');
 
 // Helper para copiar pastas recursivamente
 async function copyRecursively(src, dest) {
@@ -49,6 +57,17 @@ async function promptList(message, choices) {
     }
     console.log(chalk.red('❌ Opção inválida, tente novamente digitando o número correspondente.'));
   }
+}
+
+// Helper para confirmação interativa segura [s/N]
+async function promptConfirm(message, defaultVal = false) {
+  const rl = readline.createInterface({ input: process.stdin, output: process.stdout });
+  const hint = defaultVal ? '[S/n]' : '[s/N]';
+  const answer = await rl.question(chalk.yellow(`\n${message} ${hint}: `));
+  rl.close();
+  const trimmed = answer.trim().toLowerCase();
+  if (!trimmed) return defaultVal;
+  return trimmed === 's' || trimmed === 'sim' || trimmed === 'y' || trimmed === 'yes';
 }
 
 program
@@ -378,6 +397,253 @@ program
       console.log(chalk.cyan.bold('\n✨ Feito! Reinicie o Antigravity para as skills e workflows estarem disponíveis em qualquer projeto.\n'));
     } catch (err) {
       console.error(chalk.red(`  ❌ Erro: ${err.message}`));
+    }
+  });
+
+program
+  .command('remove')
+  .alias('rm')
+  .description('Remove uma skill ou agent do projeto atual')
+  .argument('[name]', 'Nome da skill ou agent para remover')
+  .option('--agent', 'Indica que o alvo é um agent')
+  .option('-y, --yes', 'Confirmação automática sem prompt')
+  .action(async (name, options) => {
+    const catalog = await getCatalog(__dirname);
+    const destRoot = process.cwd();
+
+    if (options.agent) {
+      const agentsDir = path.join(destRoot, '.agent', 'agents');
+      if (!existsSync(agentsDir)) {
+        console.log(chalk.yellow('\n⚠️ Nenhum agent instalado encontrado em .agent/agents.\n'));
+        return;
+      }
+
+      const existing = (await fs.readdir(agentsDir)).filter(a => a.endsWith('.md')).map(a => a.replace('.md', ''));
+      if (existing.length === 0) {
+        console.log(chalk.yellow('\n⚠️ Nenhum agent instalado encontrado.\n'));
+        return;
+      }
+
+      if (!name) {
+        name = await promptList('🗑️ Qual agent você deseja remover?', existing);
+      }
+
+      const normalized = name.replace('.md', '');
+      if (!existing.includes(normalized)) {
+        console.error(chalk.red(`\n❌ Erro: Agent "${name}" não está instalado neste projeto.\n`));
+        return;
+      }
+
+      if (!options.yes) {
+        const ok = await promptConfirm(`Tem certeza que deseja remover o agent "${normalized}"?`);
+        if (!ok) {
+          console.log(chalk.gray('\nOperação cancelada.\n'));
+          return;
+        }
+      }
+
+      const res = await removeLocalItem(destRoot, 'agent', normalized, catalog);
+      if (res.success) {
+        console.log(chalk.green(`\n✅ Agent "${normalized}" removido com sucesso!\n`));
+      } else {
+        console.error(chalk.red(`\n❌ Erro ao remover agent: ${res.reason}\n`));
+      }
+      return;
+    }
+
+    // Default: Skill
+    const skillsDir = path.join(destRoot, '.agent', 'skills');
+    if (!existsSync(skillsDir)) {
+      console.log(chalk.yellow('\n⚠️ Nenhuma skill instalada encontrada em .agent/skills.\n'));
+      return;
+    }
+
+    const existing = (await fs.readdir(skillsDir)).filter(s => {
+      try {
+        return statSync(path.join(skillsDir, s)).isDirectory();
+      } catch {
+        return false;
+      }
+    });
+
+    if (existing.length === 0) {
+      console.log(chalk.yellow('\n⚠️ Nenhuma skill instalada encontrada.\n'));
+      return;
+    }
+
+    if (!name) {
+      name = await promptList('🗑️ Qual skill você deseja remover?', existing);
+    }
+
+    if (!existing.includes(name)) {
+      console.error(chalk.red(`\n❌ Erro: Skill "${name}" não está instalada neste projeto.\n`));
+      return;
+    }
+
+    if (!options.yes) {
+      const ok = await promptConfirm(`Tem certeza que deseja remover a skill "${name}"?`);
+      if (!ok) {
+        console.log(chalk.gray('\nOperação cancelada.\n'));
+        return;
+      }
+    }
+
+    const res = await removeLocalItem(destRoot, 'skill', name, catalog);
+    if (res.success) {
+      console.log(chalk.green(`\n✅ Skill "${name}" removida com sucesso!\n`));
+    } else {
+      console.error(chalk.red(`\n❌ Erro ao remover skill: ${res.reason}\n`));
+    }
+  });
+
+program
+  .command('uninstall')
+  .description('Desinstala cirurgicamente componentes do myskills preservando arquivos criados pelo usuário')
+  .option('-p, --project', 'Desinstala componentes do projeto atual (.agent, AGENTS.md, etc.)')
+  .option('-g, --global', 'Desinstala plugin e workflows globais do myskills (~/.gemini)')
+  .option('-a, --all', 'Desinstala tanto do projeto atual quanto do escopo global')
+  .option('-y, --yes', 'Confirmação automática sem prompt')
+  .action(async (options) => {
+    let doProject = options.project || options.all;
+    let doGlobal = options.global || options.all;
+
+    if (!doProject && !doGlobal) {
+      const choice = await promptList('🗑️ O que você deseja desinstalar?', [
+        'Apenas do projeto atual (.agent, regras)',
+        'Apenas do ambiente global (~/.gemini)',
+        'Tudo (Projeto atual + Ambiente global)',
+        'Cancelar'
+      ]);
+
+      if (choice === 'Cancelar') {
+        console.log(chalk.gray('\nOperação cancelada.\n'));
+        return;
+      } else if (choice.includes('Apenas do projeto atual')) {
+        doProject = true;
+      } else if (choice.includes('Apenas do ambiente global')) {
+        doGlobal = true;
+      } else {
+        doProject = true;
+        doGlobal = true;
+      }
+    }
+
+    const catalog = await getCatalog(__dirname);
+    const destRoot = process.cwd();
+
+    // 1. Desinstalação do Projeto Local
+    if (doProject) {
+      console.log(chalk.cyan.bold('\n🔍 Analisando projeto local...'));
+      const scan = await scanProject(destRoot, catalog);
+
+      if (scan.toRemove.length === 0) {
+        console.log(chalk.gray('  ℹ️ Nenhum componente oficial do myskills encontrado no projeto atual.\n'));
+      } else {
+        console.log(chalk.yellow(`\n📦 Componentes do myskills que serão removidos (${scan.toRemove.length}):`));
+        scan.toRemove.forEach(item => {
+          console.log(`  - ${chalk.red(item.type)}: ${item.name}`);
+        });
+
+        if (scan.preserved.length > 0) {
+          console.log(chalk.green(`\n🛡️ Componentes personalizados do usuário PRESERVADOS (${scan.preserved.length}):`));
+          scan.preserved.forEach(item => {
+            console.log(`  ✓ ${chalk.green(item.type)}: ${item.name}`);
+          });
+        }
+
+        if (!options.yes) {
+          const ok = await promptConfirm('Deseja prosseguir com a remoção cirúrgica no projeto atual?');
+          if (!ok) {
+            console.log(chalk.gray('\nRemoção do projeto cancelada.\n'));
+            return;
+          }
+        }
+
+        const res = await uninstallProject(destRoot, catalog);
+        console.log(chalk.green.bold(`\n✅ ${res.removed.length} componentes do myskills foram removidos do projeto!`));
+        if (res.preserved.length > 0) {
+          console.log(chalk.cyan(`🛡️ ${res.preserved.length} componentes próprios foram mantidos intactos.\n`));
+        }
+      }
+    }
+
+    // 2. Desinstalação Global
+    if (doGlobal) {
+      console.log(chalk.cyan.bold('\n🔍 Analisando escopo global (~/.gemini)...'));
+      const scan = await scanGlobal(catalog);
+
+      if (scan.toRemove.length === 0) {
+        console.log(chalk.gray('  ℹ️ Nenhum componente global do myskills encontrado.\n'));
+      } else {
+        console.log(chalk.yellow(`\n🌐 Componentes globais que serão removidos (${scan.toRemove.length}):`));
+        scan.toRemove.forEach(item => {
+          console.log(`  - ${chalk.red(item.type)}: ${item.name}`);
+        });
+
+        if (scan.preserved.length > 0) {
+          console.log(chalk.green(`\n🛡️ Workflows globais de outros plugins/pessoais PRESERVADOS (${scan.preserved.length}):`));
+          scan.preserved.forEach(item => {
+            console.log(`  ✓ ${chalk.green(item.type)}: ${item.name}`);
+          });
+        }
+
+        if (!options.yes) {
+          const ok = await promptConfirm('Deseja prosseguir com a remoção no escopo global?');
+          if (!ok) {
+            console.log(chalk.gray('\nRemoção global cancelada.\n'));
+            return;
+          }
+        }
+
+        const res = await uninstallGlobal(catalog);
+        console.log(chalk.green.bold(`\n✅ ${res.removed.length} componentes globais foram removidos!`));
+        if (res.preserved.length > 0) {
+          console.log(chalk.cyan(`🛡️ ${res.preserved.length} workflows de terceiros/pessoais foram mantidos intactos.\n`));
+        }
+      }
+    }
+
+    console.log(chalk.cyan.bold('✨ Concluído com segurança!\n'));
+  });
+
+program
+  .command('uninstall-global')
+  .description('Desinstala cirurgicamente as skills, plugin e workflows globais do Antigravity')
+  .option('-y, --yes', 'Confirmação automática sem prompt')
+  .action(async (options) => {
+    const catalog = await getCatalog(__dirname);
+    console.log(chalk.cyan.bold('\n🔍 Analisando escopo global (~/.gemini)...'));
+    const scan = await scanGlobal(catalog);
+
+    if (scan.toRemove.length === 0) {
+      console.log(chalk.gray('  ℹ️ Nenhum componente global do myskills encontrado.\n'));
+      return;
+    }
+
+    console.log(chalk.yellow(`\n🌐 Componentes globais que serão removidos (${scan.toRemove.length}):`));
+    scan.toRemove.forEach(item => {
+      console.log(`  - ${chalk.red(item.type)}: ${item.name}`);
+    });
+
+    if (scan.preserved.length > 0) {
+      console.log(chalk.green(`\n🛡️ Workflows globais de terceiros/pessoais PRESERVADOS (${scan.preserved.length}):`));
+      scan.preserved.forEach(item => {
+        console.log(`  ✓ ${chalk.green(item.type)}: ${item.name}`);
+      });
+    }
+
+    if (!options.yes) {
+      const ok = await promptConfirm('Deseja realmente desinstalar os componentes globais do myskills?');
+      if (!ok) {
+        console.log(chalk.gray('\nOperação cancelada.\n'));
+        return;
+      }
+    }
+
+    const res = await uninstallGlobal(catalog);
+    console.log(chalk.green.bold(`\n✅ ${res.removed.length} componentes globais foram removidos com sucesso!\n`));
+    if (res.preserved.length > 0) {
+      console.log(chalk.cyan(`🛡️ ${res.preserved.length} workflows de terceiros/pessoais foram preservados.\n`));
     }
   });
 

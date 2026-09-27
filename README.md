@@ -365,6 +365,23 @@ npx @ruyfranca/myskills update
 npx @ruyfranca/myskills update --skills
 npx @ruyfranca/myskills update --agents
 npx @ruyfranca/myskills update --workflows
+
+# Remover uma skill individual do projeto atual
+npx @ruyfranca/myskills remove <nome-da-skill>
+
+# Remover um agent individual do projeto atual
+npx @ruyfranca/myskills remove <nome-do-agent> --agent
+
+# Desinstalação cirúrgica do projeto atual (preserva 100% dos seus arquivos próprios)
+npx @ruyfranca/myskills uninstall --project
+
+# Desinstalação cirúrgica global (~/.gemini)
+npx @ruyfranca/myskills uninstall --global
+# Ou via comando dedicado:
+npx @ruyfranca/myskills uninstall-global
+
+# Desinstalação completa (projeto atual + global)
+npx @ruyfranca/myskills uninstall --all
 ```
 
 ### 🚨 Resolução de Problemas (Troubleshooting)
@@ -373,12 +390,14 @@ npx @ruyfranca/myskills update --workflows
 
 Se após utilizar o `install-global` o seu Antigravity parar de funcionar com um erro de *Skills Configuration* ou *Failed to load MCP servers*, **não se desespere**, você não perdeu seu histórico. Isso ocorria em versões anteriores (`<= 1.0.31`) devido a um parser interno do Antigravity que rejeitava arquivos `.md` com cabeçalhos estruturais YAML duplicados.
 
-**Como resolver de vez o lado do cliente:**
-1. Apague apenas a pasta global de workflows que está engasgando o backend:
-   - **Mac/Linux**: `rm -rf ~/.gemini/antigravity/global_workflows`
-   - **Windows PowerShell**: `Remove-Item -Recurse -Force ~\.gemini\antigravity\global_workflows`
+**Como resolver de forma simples:**
+1. Desinstale cirurgicamente os workflows globais:
+   ```bash
+   npx @ruyfranca/myskills uninstall-global -y
+   ```
+   *(Caso prefira fazer manualmente: Mac/Linux `rm -rf ~/.gemini/antigravity/global_workflows` | Windows `Remove-Item -Recurse -Force ~\.gemini\antigravity\global_workflows`)*
 2. Pressione `Cmd+R` (ou `Ctrl+R`) no Antigravity e verifique que ele voltou ao normal e ligou com sucesso.
-3. Agora rode o comando com a versão atualizada (a partir de `1.0.32` já contém a correção embutida):
+3. Agora rode o comando com a versão atualizada:
    ```bash
    npx @ruyfranca/myskills@latest install-global
    ```
